@@ -1,0 +1,132 @@
+<!-- Name: Qingbo Jiang -->
+<!-- Student ID: 500462794 -->
+<!-- CPS630 Lab02 Section:2 -->
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+            <title>Weather App</title>
+            <link rel="stylesheet" type="text/css" href="weatherapp.css">
+    </head>
+
+	<script src="weather.js"></script>
+
+	<body>
+	<div class="center">
+	<center>
+	<p>By:Qingbo Jiang</p>
+	<input type="text" id="city" value="toronto">
+	<input type="submit" name="Get Forcast" value="Get Forecast!" onClick="startreq()"/>
+	<br>
+	<input type="submit" name="CelsiusOption" value="Metrics" onClick="makeRequestCelsius()"/>
+	<input type="submit" name="FahrenheitOption" value="Imperial" onClick="makeRequestFahrenheit()"/>
+	</center>
+	</div>
+	<center>
+	<div class="topbox">
+	<!-- weather now -->
+	<h1 id="place"></h1>
+	<h2 id="timenow"></h2>
+	<h2 id="weatherdescriptionnow"></h2>
+	<p id="weathericonnow"></p>
+	</div>
+
+
+	<h3 id="tempnow"></h3>
+	<h3 id="windspdnow"></h3>
+	<h3 id="humiditynow"></h3>
+	</center>
+
+
+
+	<!-- day -->
+	<div class="box">
+	<center>
+	<p id="weathericon0"></p>
+	<h3 id="day0"></h3>
+	<h4 id="temp0"></h4>
+	<h4 id="weatherdescription0"></h4>
+	<h6 id="windspd0"></h6>
+	<h6 id="humidity0"></h6>
+	</center>
+	</div>
+
+	<!-- day -->
+	<div class="box">
+	<center>
+	<p id="weathericon1"></p>
+	<h3 id="day1"></h3>
+	<h4 id="temp1"></h4>
+	<h4 id="weatherdescription1"></h4>
+
+	<h6 id="windspd1"></h6>
+	<h6 id="humidity1"></h6>
+	</center>
+	</div>
+
+	<!-- day -->
+	<div class="box">
+	<center>
+	<p id="weathericon2"></p>
+	<h3 id="day2"></h3>
+	<h4 id="temp2"></h4>
+	<h4 id="weatherdescription2"></h4>
+
+	<h6 id="windspd2"></h6>
+	<h6 id="humidity2"></h6>
+	</center>
+	</div>
+
+	<!-- day -->
+	<div class="box">
+	<center>
+	<p id="weathericon3"></p>
+	<h3 id="day3"></h3>
+	<h4 id="temp3"></h4>
+	<h4 id="weatherdescription3"></h4>
+
+	<h6 id="windspd3"></h6>
+	<h6 id="humidity3"></h6>
+	</center>
+	</div>
+
+	<!-- day -->
+	<div class="box">
+	<center>
+	<p id="weathericon4"></p>
+	<h3 id="day4"></h3>
+	<h4 id="temp4"></h4>
+	<h4 id="weatherdescription4"></h4>
+
+	<h5 id="windspd4"></h5>
+	<h5 id="humidity4"></h5>
+	</center>
+	</div>
+
+	<!-- day -->
+	<div class="box">
+	<center>
+	<p id="weathericon5"></p>
+	<h3 id="day5"></h3>
+	<h4 id="temp5"></h4>
+	<h4 id="weatherdescription5"></h4>
+
+	<h6 id="windspd5"></h6>
+	<h6 id="humidity5"></h6>
+	</center>
+	</div>
+
+	<!-- day -->
+	<div class="box">
+	<center>
+	<p id="weathericon6"></p>
+	<h3 id="day6"></h3>
+	<h4 id="temp6"></h4>
+	<h4 id="weatherdescription6"></h4>
+
+	<h6 id="windspd6"></h6>
+	<h6 id="humidity6"></h6>
+	</center>
+	</div>
+	</body>
+</html>

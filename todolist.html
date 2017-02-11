@@ -1,0 +1,109 @@
+<!-- Name: Qingbo Jiang -->
+<!-- Student ID: 500462794 -->
+<!-- CPS630 Lab04 Section:2 -->
+<!DOCTYPE html>
+<html>
+<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+<style>
+.topbox{
+float: left;
+margin: 15px;
+padding: 15px;
+width: 350px;
+height: 200px;
+border: 5px solid black;
+}
+@media(min-width:200px)
+{
+.topbox{width:80%;}
+.topbox{height:100%;}
+}
+
+@media(min-width:500px)
+{
+.topbox{width:90%;}
+margin-left: auto;
+}
+
+@media(min-width:700px)
+{
+.topbox{width:95%;}
+margin-left: auto;
+}
+
+@media(min-width:1000px)
+{
+.topbox{width:95%;}
+margin-left: auto;
+</style>
+<body>
+<p>By: Qingbo Jiang<br></p>
+<div ng-app="myTodoApp" ng-controller="todolist">
+<div ng-include="'myTable.htm'"></div>
+</div>
+
+<script>
+var app = angular.module('myTodoApp', []);
+app.controller('todolist', function($scope, $http) {
+  $http.get("todo.json").then(function (response) {
+      $scope.myData = response.data.todo;
+	  $scope.isNotComplete=function(list){
+	  return list.Complete===false;
+	  }
+	  $scope.isComplete=function(list){
+	  return list.Complete===true;
+	  }
+	  $scope.removeTask=function(name)
+		{
+          var Arr = eval( $scope.myData );
+          for( var i = 0; i < Arr.length; i++ )
+			{
+                if( Arr[i].Task === name )
+				{
+                    $scope.myData.splice(i, 1 );
+                    break;
+                }
+			}
+		}
+
+		  $scope.update=function(list)
+		  {
+		  if(list.task)
+			{
+			$scope.myData.push({ 'Task':list.task, 'Description': list.description, 'Complete':false});
+			$scope.taskName='';
+			$scope.taskDescription='';
+			}
+		  }
+		  $scope.checkDups=function()
+		{
+		  var arr = eval($scope.myData);
+		  for(var i=0; i<arr.length-1;i++)
+			{
+				for(var k=i+1;k<arr.length;k++)
+				{
+					if(arr[k].Task===arr[i].Task)
+					{
+					$scope.myData.splice(k,1);
+					k--;
+					}
+				}
+			}
+		}
+		 $scope.completeTask=function(task)
+		 {
+		var Arr = eval( $scope.myData );
+        for( var i = 0; i < Arr.length; i++ )
+			{
+                if( Arr[i].Task === task )
+				{
+                    Arr[i].Complete=!Arr[i].Complete;
+                }
+			}
+		 }
+  });
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+
+
+.center{
+width:60%;
+margin: auto;
+}
+.topbox{
+width:60%;
+margin: auto;
+}
+.box{
+   display : flex;
+   float: left;
+   margin: 10px;
+   padding: 10px;
+   width: 90%;
+
+}
+@media(min-width:200px)
+{
+
+margin-left: auto;
+.box{width:80%;}
+}
+
+@media(min-width:500px)
+{
+.box{width:60%;}
+margin-left: auto;          
+}
+
+@media(min-width:800px)
+{
+.box{width:40%;}
+margin-left: auto;        
+}
+
+@media(min-width:1200px)
+{
+.box{width:20%;}
+margin-left: auto;
+}
+@media(min-width:1600px)
+{
+.box{width:12%;}
+margin-left: auto;
+}
+#main {
+    display: -webkit-flex; /* Safari */
+    display: flex;
+}
+
+#main div {
+    -webkit-flex: 1;  /* Safari 6.1+ */
+    -ms-flex: 1;  /* IE 10 */    
+    flex: 1;
+}
+
+
+body{
+background-image: url("image/sunny-background.jpg");
+}

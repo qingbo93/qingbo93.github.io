@@ -1,0 +1,129 @@
+body {
+    position: relative;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  margin:0 auto;
+}
+
+.carousel-control.right, .carousel-control.left {
+   background-image: none;
+   color: #337ab7;
+}
+.carousel-indicators li {
+
+   background-color: #337ab7;
+
+}
+.carousel-indicators .active {
+
+   background-color: #337ab7;
+}
+.carousel-indicators {
+ bottom:-30px;
+}
+.background-cntower{
+ background-image: url("assets/images/CNTowerEdgeWalk.jpg");
+ color: #99ebff;
+ text-shadow: 2px 2px 4px #001a00;
+ font-family:'Tangerine, serif';
+}
+.photo{
+background-attachment: fixed;
+background-position: 50% 0;
+background-repeat: no-repeat;
+height: 600px;
+position: relative;
+}
+.background-1{
+ color: #555555;
+ background-color:#ccffe6;
+ font-family:'Tangerine';
+}
+.background-2{
+ color: #ffffff;
+ background-color:#474e5d;
+ font-family:'Open+Sans';
+}
+.background-3{
+ color: #000000;
+ background-color:#e6fff5;
+ font-family:'Open+Sans';
+}
+.background-4{
+ color: #000000;
+ background-color:#e6ffff;
+ font-family:'Open+Sans';
+}
+.container-fluid {
+padding: 60px 50px;
+}
+
+.thumbnail {
+   padding: 0 0 15px 0;
+   border: none;
+   border-radius: 0;
+}
+.myText{
+ padding: 50px 50px 0 50px;
+}
+.slideanim {visibility:hidden;}
+.slide {
+   /* The name of the animation */
+   animation-name: slide;
+   -webkit-animation-name: slide;
+   /* The duration of the animation */
+   animation-duration: 1s;
+   -webkit-animation-duration: 1s;
+   /* Make the element visible */
+   visibility: visible;
+}
+
+@keyframes slide {
+   0% {
+       opacity: 0;
+       transform: translateY(70%);
+   }
+   100% {
+       opacity: 1;
+       transform: translateY(0%);
+   }
+}
+@-webkit-keyframes slide {
+   0% {
+       opacity: 0;
+       -webkit-transform: translateY(70%);
+   }
+   100% {
+       opacity: 1;
+       -webkit-transform: translateY(0%);
+   }
+}
+
+#video_pop {
+   z-index: 9999;
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   width: 100%;
+   height: 100%;
+   background: rgba(0,0,0,0.5);
+   display: none;
+   cursor: pointer;
+}
+
+#the_Video {
+   width: 50%;
+   position: fixed;
+   top: 50%;
+   left: 50%;
+   -webkit-transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%);
+
+}
+#bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

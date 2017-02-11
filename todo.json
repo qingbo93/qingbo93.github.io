@@ -1,0 +1,29 @@
+{ "todo":[ {
+"Task":"Buy food","Complete":false,"Description":"Buy milk,eggs,meat,fruits."},
+	{
+	"Task":"Study",
+	"Complete":false,
+	"Description":"Study for final exams"
+	},
+	{
+	"Task":"Work on CPS630 Lab",
+	"Complete":false,
+	"Description":"Finish webdesign lab"
+	},
+	{
+	"Task":"Buy meds",
+	"Complete":false,
+	"Description":"buy cough medicine"
+	},
+	{
+	"Task":"Buy meds",
+	"Complete":false,
+	"Description":"buy cough medicine"
+	},
+	{
+	"Task":"sell car",
+	"Complete":true,
+	"Description":"put an ad for selling the car"
+	}
+	
+]}
