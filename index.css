@@ -28,6 +28,7 @@ h4 {
 .carousel-control.right, .carousel-control.left {
     background-image: none;
     color: #41f4a3;
+    margin-left: -18%;
 }
 
 .carousel-indicators li {
