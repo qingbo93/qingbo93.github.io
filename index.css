@@ -12,7 +12,7 @@ h2 {
 h4 {
     font-size: 2.2vmax;
 }
-
+li{text-align:left;}
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
     margin: 0 auto;
 }
