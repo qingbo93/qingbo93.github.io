@@ -1,248 +1,278 @@
 <!DOCTYPE HTML>
 
 <html>
-	<head>
-		<title>Qingbo Jiang</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-		<link rel="stylesheet" type="text/css" href="index.css">
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-		<script src="https://use.fontawesome.com/05caa85f02.js"></script>
 
-	</head>
+<head>
+	<title>Qingbo Jiang's Homepage</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://www.w3schools.com/lib/w3.css">
+	<link rel="stylesheet" type="text/css" href="index.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="https://use.fontawesome.com/05caa85f02.js"></script>
+</head>
 <script src="index.js"></script>
 
-	<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
-		<nav class="navbar navbar-default navbar-fixed-top">
-		  <div class="container">
-		    <div class="navbar-header">
-		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+<!-- My Top NavBar -->
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+	<nav class="navbar navbar-default navbar-fixed-top navbar-opacity" id="aNavbar">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		        <span class="icon-bar"></span>
 		      </button>
-		      <a class="navbar-brand" href="#myPage">Home</a>
-		    </div>
-		    <div class="collapse navbar-collapse" id="myNavbar">
-		      <ul class="nav navbar-nav navbar-right">
-		        <li><a href="#about">ABOUT</a></li>
-		        <li><a href="#portfolio">PORTFOLIO</a></li>
-		        <li><a href="#academicprojs">ACADEMIC PROJECTS</a></li>
-		        <li><a href="#resume">RESUME</a></li>
-						<li class="dropdown">
-          <a class="dropdown-toggle" data-toggle="dropdown" href="#">CONTACT
-            <span class="caret"></span>
-          </a>
-          <ul class="dropdown-menu">
-            <li><a href="#email">By Email</a></li>
-            <li><a href="#socialmedia">By Social Media</a></li>
-          </ul>
-        </li>
-		      </ul>
-		    </div>
-		  </div>
-		</nav>
+				<a class="navbar-brand" href="#myPage"><i class="fa fa-home" aria-hidden="true"></i>Home</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+					<li><a href="#about"><i class="fa fa-user-circle-o" aria-hidden="true"></i>About</a></li>
+					<li><a href="#experience"><i class="fa fa-globe" aria-hidden="true"></i></i>Experience</a></li>
+					<li><a href="#portfolio"><i class="fa fa-th"></i> Portfolio</a></li>
+					<li><a href="#resume"><i class="fa fa-university" aria-hidden="true"></i>Expertise</a></li>
+					<li><a href="#contact"><i class="fa fa-envelope"></i>Contact</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
 
-							<div class = "container-fluid background-cntower photo">
-								<br><br>
-								<b><h2>Qingbo Jiang</h2></b>
-								<br><br>
+	<!-- My CN Tower Image -->
+	<div class="background-cntower w3-display-container w3-opacity-min">
+		<br><br>
+		<b><h2 class = "paddingtopleft">Qingbo Jiang</h2></b>
+		<br><br>
+		<b><h4 class ="paddingbottomright" id="bottom-right">No dream is too big. No challenge is too great.</h4></b>
+		<a id="bottm-center" href="#about"><i class="fa fa-angle-double-down arrow" style="font-size:5vmax" aria-hidden="true"></i></a>
+	</div>
 
-								<b><h3 id="bottom-right">No dream is too big. No challenge is too great.</h3></b>
+	<!-- My About Page Section -->
+	<div id="about">
+		<div class="container-fluid background-4 slideanim">
+			<div class="col-sm-4">
+				<img class="img-responsive img-circle w3-image w3-opacity w3-hover-opacity-off" src="assets/images/myprofilepicture.jpg" style="width:60%">
+			</div>
+			<div class="col-sm-8">
+				<h3>About Me</h3>
+				<br>
+				<p>Hi. My name is Qingbo. I began my journey into computer science during my second year of highschool. I decided that it would be fun to take a computer science course at the time because I really enjoyed working with technology. Before discovering
+					programming, I used to love (mindlessly) editing videos and posting some of them on youtube. If you want to check out my youtube channel: <a href="https://www.youtube.com/user/runescapegame">runescapegame</a>. However, that changed because the programming
+					experience was so incredible, especially the fact that I was able to create something from nothing by myself with code alone. I knew at that point that computer science is going to be the path I want to take in my life.</p>
 
+				<p>I love challenges and I love learning new things. Everytime I set myself out to complete a task, I feel like I am learning something new. Whether it is creating video editing or coding or completely something else, there is so much that I still do
+					not know and I strive to improve each and everyday. Everytime I finish a project, I feel a huge sense of accomplishment. The more challenging a project is, the greater the satisfaction at the end. It almost feels like I was brought into this world
+					to code and create new things.</p>
+
+				<p>My goal in life is to one day make an impact in the world. I do not wish to pass on with my name forgotten. I want to create an app that would make life easier for people and truly redefine how we live lives, and I would like to see myself doing just
+					that in 5-10 years from now.</p>
+			</div>
+		</div>
+	</div>
+
+	<!--Work Experience Section -->
+	<div id="experience" class="container-fluid text-center background-3">
+		<h3>My Work Experience</h3>
+
+	</div>
+
+
+	<!--Portfolio section -->
+	<div id="portfolio" class="container-fluid text-center background-3">
+		<h3>My Portfolio</h3>
+		<!--Portfolio Tabs-->
+		<ul class="nav nav-tabs">
+			<li class="active"><a data-toggle="tab" href="#personal">Personal</a></li>
+			<li><a data-toggle="tab" href="#work">Work</a></li>
+			<li><a data-toggle="tab" href="#academic">Academic</a></li>
+		</ul>
+
+		<div class="tab-content">
+			<div id="personal" class="tab-pane fade in active">
+				<!--Personal Tabs-->
+				<div class="w3-third">
+					<p></p>
+				</div>
+				<div class="row text-center w3-third">
+					<!--<div class="col-sm-4"> for when I have more projects-->
+					<div class="thumbnail background-3">
+						<h3><img src="assets/images/advancetipsplitshare_logo.png" style="width:50px;height:50px;"> Advance Tip Split Share</h3>
+						<br>
+						<div id="myCarousel" class="carousel slide background-3" style="width: 100%;" data-ride="carousel">
+							<!-- Indicators -->
+							<ol class="carousel-indicators">
+								<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+								<li data-target="#myCarousel" data-slide-to="1"></li>
+								<li data-target="#myCarousel" data-slide-to="2"></li>
+								<li data-target="#myCarousel" data-slide-to="3"></li>
+							</ol>
+							<!-- Wrapper for slides -->
+							<div class="carousel-inner" role="listbox">
+								<div class="item active">
+									<img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot.jpg" width="200" height="350">
+								</div>
+								<div class="item">
+									<img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot2.jpg" width="200" height="350">
+								</div>
+								<div class="item">
+									<img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot3.jpg" width="200" height="350">
+								</div>
+								<div class="item">
+									<img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot4.jpg" width="200" height="350">
+								</div>
 							</div>
-							<div id="about">
+							<!-- Left and right controls -->
+							<a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+								<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+								<span class="sr-only">Previous</span>
+							</a>
+							<a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+								<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+								<span class="sr-only">Next</span>
+							</a>
+						</div>
+						<br>
+						<p align="left">The world's most advanced bill splitting app. It contains three different modes: even split, buffet mode and custom bill. It also has an option to calculate tip before tax. There is a send bill button, letting you send the calculation of any bill
+							to all your friends via any social media platform, making dining simple and fun again.</p>
+						Click <a href="http://www.goo.gl/czghyy">here</a></h3> to check it out!
+					</div>
+					<!--</div>-->
+				</div>
+			</div>
 
-
-							<div class = "container-fluid background-2 slideanim">
-								<div class="col-sm-4">
-									<img class="img-responsive img-circle" src="assets/images/myprofilepicture.jpg" style="width:60%">
-								</div>
-								<div class = "col-sm-8">
-									<h3>About Me</h3>
+			<div id="work" class="tab-pane fade">
+				<p>Coming Soon..</p>
+			</div>
+			<div id="academic" class="tab-pane fade">
+				<p>Some of my academic projects from my last semester.</p>
+				<!-- Academic projects-->
+				<div id="academicprojs">
+					<div class="container-fluid text-center background-3">
+						<div class="row text-center slideanim">
+							<div class="col-sm-4">
+								<div class="thumbnail background-3">
+									<h3>Library Watchdog</h3>
+									<img class="img-fluid" src="assets/images/robotics.jpg" width="500" height="400">
 									<br>
-						         <p>Hi. My name is Qingbo. I began my journey into computer science during my second year of highschool. I decided that it would be fun to take a computer science course at the time because I really enjoyed working with technology. Before discovering programming, I used to love (mindlessly) editing videos and posting some of them on youtube. If you want to check out my youtube channel: <a href= "https://www.youtube.com/user/runescapegame">runescapegame</a>. However, that changed because the programming experience was so incredible, especially the fact that I was able to create something from nothing by myself with code alone. I knew at that point that computer science is going to be the path I want to take in my life.</p>
-
-										 <p>I love challenges and I love learning new things. Everytime I set myself out to complete a task, I feel like I am learning something new. Whether it is creating video editing or coding or completely something else, there is so much that I still do not know and I strive to improve each and everyday. Everytime I finish a project, I feel a huge sense of accomplishment. The more challenging a project is, the greater the satisfaction at the end.  It almost feels like I was brought into this world to code and create new things.</p>
-
-										 <p>My goal in life is to one day make an impact in the world. I do not wish to pass on with my name forgotten. I want to create an app that would make life easier for people and truly redefine how we live lives, and I would like to see myself doing just that in 5-10 years from now.</p>
-									 </div>
-									 </div>
-								 </div>
-
-						       <div id="portfolio">
-
-										 <div class ="container-fluid text-center background-3">
-										 <h3>My Portfolio</h3>
-
-										 	<div class = "row text-center">
-												<div class = "col-sm-4">
-													<div class = "thumbnail background-3">
-														<h3><img src="assets/images/advancetipsplitshare_logo.png" style="width:50px;height:50px;"> Advance Tip Split Share</h3>
-
-
-														<br>
-														<div id="myCarousel" class="carousel slide background-3" style="width: 100%;" data-ride="carousel">
-														<!-- Indicators -->
-														<ol class="carousel-indicators">
-														<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-														<li data-target="#myCarousel" data-slide-to="1"></li>
-														<li data-target="#myCarousel" data-slide-to="2"></li>
-														<li data-target="#myCarousel" data-slide-to="3"></li>
-														</ol>
-
-														<!-- Wrapper for slides -->
-														<div class="carousel-inner" role="listbox">
-														<div class="item active">
-														<img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot.jpg" width="200" height="350">
-														</div>
-
-														<div class="item">
-														<img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot2.jpg" width="200" height="350">
-														</div>
-
-														<div class="item">
-														<img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot3.jpg" width="200" height="350">
-														</div>
-
-														<div class="item">
-														<img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot4.jpg" width="200" height="350">
-														</div>
-														</div>
-
-														<!-- Left and right controls -->
-												    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-												      <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-												      <span class="sr-only">Previous</span>
-												    </a>
-												    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-												      <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-												      <span class="sr-only">Next</span>
-														</a>
-														</div>
-													<br>
-													 <p align="left">The world's most advanced bill splitting app. It contains three different modes: even split, buffet mode and custom bill. It also has an option to calculate tip before tax. There is a send bill button, letting you send the calculation of any bill to all your friends via any social media platform, making dining simple and fun again.</p>
-													 Click <a href="http://www.goo.gl/czghyy">here</a></h3> to check it out!
-												 </div>
-											 </div>
-								 		</div>
-									</div>
+									<p align="left">The library watchdog was created to keep the library quiet. It will constantly scan the surrounding area for the loudest noise and move towards it. Once it finds the noise source, it will tell the noisemaker to quiet down. It is equipped with
+										the latest technology which allows it to avoid falling off platforms, and avoid obstacles. This has many other utilizations such being used as a scout to find trapped survivors during an earthquake.</p>
+									Click <a id="idForShadowClick342342342423" onclick="onVideoClick('assets/videos/Final Robotics Project.webm');">here</a> to check it out in action!
 								</div>
-								<div id="video_pop" onclick="onPopClick()"></div>
-
-
-									<!-- Academic projects-->
-								<div id ="academicprojs">
-									<div class ="container-fluid text-center background-4">
-									<h3>My Academic Projects</h3>
-									<p>Some of my academic projects from the last semester at Ryerson.</p>
-									 <div class = "row text-center slideanim">
-
-											<div class = "col-sm-4">
-											 <div class = "thumbnail background-4">
-												 <h3>Library Watchdog</h3>
-												 <img class="img-fluid" src="assets/images/robotics.jpg" width="500" height="400">
-											 <br>
-												<p align="left">The library watchdog was created to keep the library quiet. It will constantly scan the surrounding area for the loudest noise and move towards it. Once it finds the noise source, it will tell the noisemaker to quiet down. It is equipped with the latest technology which allows it to avoid falling off platforms, and avoid obstacles. This has many other utilizations such being used as a scout to find trapped survivors during an earthquake.</p>
-												Click <a id="idForShadowClick342342342423" onclick="onVideoClick('assets/videos/Final Robotics Project.webm');">here</a> to check it out in action!
-											</div>
-											</div>
-
-										 <div class = "col-sm-4">
-		 									<div class = "thumbnail background-4">
-		 										<h3>Online Chat</h3>
-		 										<img class="img-fluid" src="assets/images/babbletext.jpg" width="450" height="400">
-		 									<br>
-		 									 <p align="left">BabbleT is a free web application that allows you to chat with new instantly people every day from anywhere. BabbleT finds people with similar interests by letting you search or enter the topic you want to talk about. Users can also customize their profiles and display pictures to their own liking.</p>
-		 									 Click <a href="http://babbletxt.com/">here</a> to check it out!
-		 								 </div>
-		 							 </div>
-
-										 <div class = "col-sm-4">
-											 <div class = "thumbnail background-4">
-												 <h3>Weather App</h3>
-												 <img class="img-fluid" src="assets/images/weatherapp.jpg" width="550" height="400">
-											 <br>
-												<p align="left">This weather app allows you to check weather in cities from all over the world! Just enter the city name and watch it fetch all the data. Data is parsed from openweathermap.org in JSON format. Comes with 7 days long term forcast and 3-hours shorterm forcast.</p>
+							</div>
+							<div class="col-sm-4">
+								<div class="thumbnail background-3">
+									<h3>Online Chat</h3>
+									<img class="img-fluid" src="assets/images/babbletext.jpg" width="450" height="400">
+									<br>
+									<p align="left">BabbleT is a free web application that allows you to chat with new instantly people every day from anywhere. BabbleT finds people with similar interests by letting you search or enter the topic you want to talk about. Users can also customize
+										their profiles and display pictures to their own liking.</p>
+									Click <a href="http://babbletxt.com/">here</a> to check it out!
+								</div>
+							</div>
+							<div class="col-sm-4">
+								<p>(Lesser Projects)</p>
+								<div id="myCarousel2" class="carousel slide background-3" style="width: 100%;" data-ride="carousel">
+									<!-- Indicators -->
+									<ol class="carousel-indicators">
+										<li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+										<li data-target="#myCarousel2" data-slide-to="1"></li>
+										<li data-target="#myCarousel2" data-slide-to="2"></li>
+									</ol>
+									<!-- Wrapper for slides -->
+									<div class="carousel-inner" role="listbox">
+										<div class="item active academicProjectCarousel">
+											<div class="thumbnail background-3">
+												<h3>Weather App</h3>
+												<img class="img-fluid" src="assets/images/weatherapp.jpg" width="550" height="400">
+												<br>
+												<p align="left">This weather app allows you to check weather in cities from all over the world! Just enter the city name and watch it fetch all the data. Data is parsed from openweathermap.org in JSON format. Comes with 7 days long term forcast and 3-hours
+													shorterm forcast.
+												</p>
 												Click <a href="weather.html">here</a> to check it out!
 											</div>
 										</div>
-									</div>
-
-
-<!-- new row -->
-							<div class = "row text-center slideanim">
-
-								<div class = "col-sm-4">
-									<div class = "thumbnail background-4">
-										<h3>Distance</h3>
-										<img class="img-fluid" src="assets/images/distanceapp.png" width="400">
-									<br>
-									 <p align="left">Handy tool to get the location by uploading co-ordinates by dragging a textfile to the area and can find your current location as well. Uses reverse geolocation to find the address for each set of lon and lat. This app uses a web worker to calculate the distance between the two points.</p>
-									 Click <a href="distance.html">here</a> to check it out!
-								 </div>
-							 </div>
-
-							 <div class = "col-sm-4">
-								 <div class = "thumbnail background-4">
-									 <h3>Todo List</h3>
-									 <img class="img-fluid" src="assets/images/todolistapp.png" width="300" height="300">
-								 <br>
-									<p align="left">A very interactive angular todo app. Handy tool keep track and add to your to-do list. It will help you remove duplicates, and has two different lists for moving a task from todo to completed. </p>
-									Click <a href="todolist.html">here</a> to check it out!
-								</div>
-							</div>
-
-						</div>
-					</div>
-				</div>
-
-						       <div id="resume">
-											<div class ="container-fluid text-center background-2">
-											<h3>My Resume</h3>
-											<br>
-
-											<img class="img-fluid" src="assets/images/arduino-icon-2.png" style="width:300px;height:300px;">
-											<img class="img-fluid" src="assets/images/Front+boot.png" style="width:300px;height:300px;">
-											<img class="img-fluid" src="assets/images/android-icon.png" style="width:300px;height:300px;">
-											<br><br>
-
-											<a href ="https://docs.google.com/document/d/1a0_7aTXx7dBYm4xoydvY5w__BtZJctYvq3qER9dYC_s/edit?usp=sharing"><img class="img-fluid" src="assets/images/resume-templates.png" style="width:200px;height:200px;"><br>Click to view my full resume.</a>
+										<div class="item academicProjectCarousel">
+											<div class="thumbnail background-3">
+												<h3>Distance</h3>
+												<img class="img-fluid" src="assets/images/distanceapp.png" width="400">
+												<br>
+												<p align="left">Handy tool to get the location by uploading co-ordinates by dragging a textfile to the area and can find your current location as well. Uses reverse geolocation to find the address for each set of lon and lat. This app uses a web worker to
+													calculate the distance between the two points.</p>
+												Click <a href="distance.html">here</a> to check it out!
 											</div>
-						       </div>
-
-<div class ="container-fluid text-center background-1">
-									 <h3>Contact Me</h3>
-									 <br>
-						       <div id="email" class="container-fluid">
-
-						         <h4>Reach me by Email:</h4>
-
-
-
-						         <a href="mailto:qingbo1993@gmail.com"><img class="img-fluid" src="assets/images/email-icon-23.png" style="width:40px;height:40px;"> qingbo1993@gmail.com</a>
-
-						       <div id="socialmedia" class="container-fluid">
-						         <h4>Reach me on Social Media:</h4>
-										 <a href="https://github.com/qingbo93">
-											 <span class="fa-stack fa-2x"><i class="fa fa-square-o fa-stack-2x"></i>
-																										<i class="fa fa-github fa-stack-1x"></i>
-											</span>
-										</a>
-										 <a href="https://ca.linkedin.com/in/qingbojiang">
-											 <span class="fa-stack fa-2x"><i class="fa fa-square-o fa-stack-2x"></i>
-																										<i class="fa fa-linkedin fa-stack-1x"></i>
-										   </span>
-										</a>
+										</div>
+										<div class="item academicProjectCarousel">
+											<div class="thumbnail background-3">
+												<h3>Todo List</h3>
+												<img class="img-fluid" src="assets/images/todolistapp.png" width="300" height="300">
+												<br>
+												<p align="left">A very interactive angular todo app. Handy tool keep track and add to your to-do list. It will help you remove duplicates, and has two different lists for moving a task from todo to completed. </p>
+												Click <a href="todolist.html">here</a> to check it out!
+											</div>
 										</div>
 									</div>
-</div>
-	</body>
-	<footer>
-		<div class="panel-footer">
-			<p><center>Made by Qingbo Jiang © 2016</center></p>
+									<!-- Left and right controls -->
+									<a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev">
+										<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+										<span class="sr-only">Previous</span>
+									</a>
+									<a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next">
+										<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+										<span class="sr-only">Next</span>
+									</a>
+								</div>
+							</div>
+						</div>
+						<!-- new row in academic projects-->
+
+					</div>
+				</div>
+			</div>
 		</div>
-	</footer>
+	</div>
+
+	<div id="video_pop" onclick="onPopClick()"></div>
+
+	<!-- Resume/Qualification Sections -->
+	<div id="resume">
+		<div class="container-fluid text-center background-4">
+			<h3>Expertise</h3>
+			<br>
+			<img class="img-fluid" src="assets/images/arduino-icon-2.png" style="width:300px;height:300px;">
+			<img class="img-fluid" src="assets/images/Front+boot.png" style="width:300px;height:300px;">
+			<img class="img-fluid" src="assets/images/android-icon.png" style="width:300px;height:300px;">
+			<br><br>
+			<a href="https://docs.google.com/document/d/1a0_7aTXx7dBYm4xoydvY5w__BtZJctYvq3qER9dYC_s/edit?usp=sharing"><img class="img-fluid" src="assets/images/resume-templates.png" style="width:200px;height:200px;"><br>Click to view my full resume.</a>
+		</div>
+	</div>
+	<div class="container-fluid text-center background-3">
+		<!-- Contact me Section -->
+		<h3>Contact Me</h3>
+		<br>
+		<div id="contact" class="container-fluid">
+			<h5>Reach me by Email:</h5>
+			<a href="mailto:qingbo1993@gmail.com"><img class="img-fluid" src="assets/images/email-icon-23.png" style="width:40px;height:40px;"> qingbo1993@gmail.com</a>
+			<div id="socialmedia" class="container-fluid">
+				<h5>Reach me on Social Media:</h5>
+				<a href="https://github.com/qingbo93">
+					<span class="fa-stack fa-2x"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-github fa-stack-1x"></i></span>
+				</a>
+				<a href="https://ca.linkedin.com/in/qingbojiang">
+					<span class="fa-stack fa-2x"><i class="fa fa-square-o fa-stack-2x"></i><i class="fa fa-linkedin fa-stack-1x"></i></span>
+				</a>
+			</div>
+		</div>
+	</div>
+</body>
+<!--My Footer Section-->
+<footer>
+	<div class="panel-footer background-4">
+		<p>
+			<center>Made by Qingbo Jiang © 2016</center>
+		</p>
+	</div>
+</footer>
+
 </html>

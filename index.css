@@ -1,129 +1,210 @@
-body {
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
     position: relative;
 }
 
-.carousel-inner > .item > img,
-.carousel-inner > .item > a > img {
-  margin:0 auto;
+h2 {
+    font-size: 3vmax;
 }
 
+h4 {
+    font-size: 2.2vmax;
+}
+
+.carousel-inner>.item>img, .carousel-inner>.item>a>img {
+    margin: 0 auto;
+}
+
+.academicProjectCarousel{
+  height: 600px;
+  max-height: 600px;
+}
 .carousel-control.right, .carousel-control.left {
-   background-image: none;
-   color: #337ab7;
+    background-image: none;
+    color: #41f4a3;
 }
+
 .carousel-indicators li {
-
-   background-color: #337ab7;
-
+    background-color: #337ab7;
 }
+
 .carousel-indicators .active {
+    background-color: #337ab7;
+}
 
-   background-color: #337ab7;
-}
 .carousel-indicators {
- bottom:-30px;
+    bottom: -30px;
 }
-.background-cntower{
- background-image: url("assets/images/CNTowerEdgeWalk.jpg");
- color: #99ebff;
- text-shadow: 2px 2px 4px #001a00;
- font-family:'Tangerine, serif';
+
+.nav-tabs>li {
+    float: none;
+    display: inline-block;
+    zoom: 1;
 }
-.photo{
-background-attachment: fixed;
-background-position: 50% 0;
-background-repeat: no-repeat;
-height: 600px;
-position: relative;
+
+.navbar {
+    background-color: transparent;
+    transition: background-color 1s ease 0s;
+    border: none;
 }
-.background-1{
- color: #555555;
- background-color:#ccffe6;
- font-family:'Tangerine';
+
+.navbar.solid {
+    background-color: #F8F8F8;
+    transition: background-color 1s ease 0s;
+    box-shadow: 0 0 4px grey;
 }
-.background-2{
- color: #ffffff;
- background-color:#474e5d;
- font-family:'Open+Sans';
+
+.nav-tabs {
+    text-align: center;
 }
-.background-3{
- color: #000000;
- background-color:#e6fff5;
- font-family:'Open+Sans';
+
+.background-cntower {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-.background-4{
- color: #000000;
- background-color:#e6ffff;
- font-family:'Open+Sans';
+
+.paddingtopleft {
+    padding-top: 15%;
+    padding-left: 5%;
 }
+
+.paddingbottomright {
+    padding-bottom: 15%;
+    padding-right: 1%;
+}
+
+.background-cntower {
+    background-image: url("assets/images/CNTowerEdgeWalk.jpg");
+    color: #FFFFFF;
+    text-shadow: 2px 2px 5px #000000;
+    font-family: 'Tangerine, serif';
+    min-height: 100%;
+}
+
+.background-1 {
+    color: #555555;
+    background-color: #ccffe6;
+    font-family: 'Tangerine';
+}
+
+.background-2 {
+    color: #ffffff;
+    background-color: #474e5d;
+    font-family: 'Open+Sans';
+}
+
+.background-3 {
+    color: #000000;
+    background-color: #FFFFFF;
+    font-family: 'Open+Sans';
+}
+
+.background-4 {
+    color: #FFFFFF;
+    background-color: #404040;
+    font-family: 'Open+Sans';
+}
+
 .container-fluid {
-padding: 60px 50px;
+    padding: 60px 50px;
 }
 
 .thumbnail {
-   padding: 0 0 15px 0;
-   border: none;
-   border-radius: 0;
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
 }
-.myText{
- padding: 50px 50px 0 50px;
+
+.myText {
+    padding: 50px 50px 0 50px;
 }
-.slideanim {visibility:hidden;}
+
+.slideanim {
+    visibility: hidden;
+}
+
 .slide {
-   /* The name of the animation */
-   animation-name: slide;
-   -webkit-animation-name: slide;
-   /* The duration of the animation */
-   animation-duration: 1s;
-   -webkit-animation-duration: 1s;
-   /* Make the element visible */
-   visibility: visible;
+    /* The name of the animation */
+    animation-name: slide;
+    -webkit-animation-name: slide;
+    /* The duration of the animation */
+    animation-duration: 1s;
+    -webkit-animation-duration: 1s;
+    /* Make the element visible */
+    visibility: visible;
+}
+
+.arrow {
+  -webkit-animation: arrow-jump 1.5s infinite;
+  -moz-animation:    arrow-jump 1.5s infinite;
+  -o-animation:      arrow-jump 1.5s infinite;
+  animation:         arrow-jump 1.5s infinite;
+}
+@-webkit-keyframes arrow-jump {
+  0%   { opacity: 0;}
+  100% { opacity: 1;
+        -webkit-transform: translateY(10px);
+        -moz-transform: translateY(10px);
+        -0-transform: translateY(10px);
+        transform: translateY(10px);
+    }
 }
 
 @keyframes slide {
-   0% {
-       opacity: 0;
-       transform: translateY(70%);
-   }
-   100% {
-       opacity: 1;
-       transform: translateY(0%);
-   }
+    0% {
+        opacity: 0;
+        transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0%);
+    }
 }
+
 @-webkit-keyframes slide {
-   0% {
-       opacity: 0;
-       -webkit-transform: translateY(70%);
-   }
-   100% {
-       opacity: 1;
-       -webkit-transform: translateY(0%);
-   }
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    }
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
 }
 
 #video_pop {
-   z-index: 9999;
-   position: absolute;
-   top: 0px;
-   left: 0px;
-   width: 100%;
-   height: 100%;
-   background: rgba(0,0,0,0.5);
-   display: none;
-   cursor: pointer;
+    z-index: 9999;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: none;
+    cursor: pointer;
 }
 
 #the_Video {
-   width: 50%;
-   position: fixed;
-   top: 50%;
-   left: 50%;
-   -webkit-transform: translate(-50%, -50%);
-   transform: translate(-50%, -50%);
-
+    width: 50%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
 }
+
 #bottom-right {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+#bottm-center {
+    position: absolute;
+    bottom: 0;
+    right: 50%;
 }

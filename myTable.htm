@@ -2,34 +2,25 @@
 <!-- Student ID: 500462794 -->
 <!-- CPS630 Lab04 Section:2 -->
 <form name="form" novalidate class="addTask">
-	Task: <input type="text" ng-model="list.task" name="taskName"required=""><br>
-	 <div ng-show="form.$submitted">
-      <div ng-show="form.taskName.$error.required">Task field cannot be empty!</div>
-    </div>
-    Description: <input type="text" ng-model="list.description" name="taskDescription"><br>
+	Task: <input type="text" ng-model="list.task" name="taskName" required=""><br>
+	<div ng-show="form.$submitted">
+		<div ng-show="form.taskName.$error.required">Task field cannot be empty!</div>
+	</div>
+	Description: <input type="text" ng-model="list.description" name="taskDescription"><br>
 	<input type="submit" ng-click="update(list)" value="Add Task!">
 	<br>
-	<h3>To Do List: </h3>
-	Check if Completed	&nbsp;	&nbsp;	<input type="button" ng-click="checkDups()" value="Remove duplicates">
+	<h3>To Do List: </h3> Check if Completed &nbsp; &nbsp; <input type="button" ng-click="checkDups()" value="Remove duplicates">
 </form>
 
 
-  <ul ng-repeat="x in myData | filter:isNotComplete" class="topbox">
-  <input type="checkbox" ng-model="task.check" ng-click="completeTask(x.Task)">
-    {{ x.Task }}	
-	{{' ---- ' + x.Description}}
-	&nbsp;
+<ul ng-repeat="x in myData | filter:isNotComplete" class="topbox">
+	<input type="checkbox" ng-model="task.check" ng-click="completeTask(x.Task)"> {{ x.Task }} {{' ---- ' + x.Description}} &nbsp;
 	<input type="button" ng-click="removeTask(x.Task)" value="Remove task">
 	<br>
-  </ul>
+</ul>
 <br>
-<h3>Completed List</h3>
-Uncheck if Incomplete
-  <ul ng-repeat="x in myData | filter:isComplete" class="topbox">
-  <input type="checkbox" ng-model="task.check" ng-click="completeTask(x.Task)" ng-init="task.check=true">
-    {{ x.Task }}	
-	{{' ---- ' + x.Description}}
-	&nbsp;
+<h3>Completed List</h3> Uncheck if Incomplete
+<ul ng-repeat="x in myData | filter:isComplete" class="topbox">
+	<input type="checkbox" ng-model="task.check" ng-click="completeTask(x.Task)" ng-init="task.check=true"> {{ x.Task }} {{' ---- ' + x.Description}} &nbsp;
 	<input type="button" ng-click="removeTask(x.Task)" value="Remove task">
-  </ul>
-  
+</ul>
