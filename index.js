@@ -1,10 +1,21 @@
-function myMap() {
 var myCenter = new google.maps.LatLng(43.894945, -79.420743);
-var mapProp = {center:myCenter, zoom:12, scrollwheel:false, draggable:false, mapTypeId:google.maps.MapTypeId.ROADMAP};
+function initialize() {
+var mapProp = {
+  center: myCenter,
+  zoom: 12,
+  scrollwheel: false,
+  draggable: false,
+  mapTypeId: google.maps.MapTypeId.ROADMAP
+  };
 var map = new google.maps.Map(document.getElementById("googleMap"),mapProp);
-var marker = new google.maps.Marker({position:myCenter});
+
+var marker = new google.maps.Marker({
+  position: myCenter,
+});
 marker.setMap(map);
 }
+google.maps.event.addDomListener(window, 'load', initialize);
+
 $(document).ready(function() {
     $(".navbar a, a[href='#about']").on('click', function(event) {
         if (this.hash !== "") {

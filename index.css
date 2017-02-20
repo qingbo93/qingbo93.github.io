@@ -22,8 +22,7 @@ h4 {
  float:left;
 }
 .academicProjectCarousel{
-  height: 600px;
-  max-height: 600px;
+
 }
 .carousel-control.right, .carousel-control.left {
     background-image: none;
@@ -98,7 +97,7 @@ h4 {
 
 .background-2 {
     color: #ffffff;
-    background-color: #474e5d;
+    background-color: #202020;
     font-family: 'Open+Sans';
 }
 
@@ -110,7 +109,7 @@ h4 {
 
 .background-4 {
     color: #FFFFFF;
-    background-color: #404040;
+    background-color: #6DBDD6;
     font-family: 'Open+Sans';
 }
 
@@ -148,6 +147,15 @@ h4 {
   -moz-animation:    arrow-jump 1.5s infinite;
   -o-animation:      arrow-jump 1.5s infinite;
   animation:         arrow-jump 1.5s infinite;
+}
+.floatright{
+float:right;
+}
+.floatleft{
+float:left;
+}
+.displayblock{
+  display: block;
 }
 @-webkit-keyframes arrow-jump {
   0%   { opacity: 0;}
