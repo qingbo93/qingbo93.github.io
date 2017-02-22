@@ -49,7 +49,7 @@ li{text-align:left;}
 }
 
 .navbar {
-    background-color: transparent;
+    background:rgba(255,255,255,0.5);
     transition: background-color 1s ease 0s;
     border: none;
 }
@@ -62,13 +62,6 @@ li{text-align:left;}
 
 .nav-tabs {
     text-align: center;
-}
-
-.background-cntower {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
 }
 
 .paddingtopleft {
@@ -87,6 +80,10 @@ li{text-align:left;}
     text-shadow: 2px 2px 5px #000000;
     font-family: 'Tangerine, serif';
     min-height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .background-1 {
