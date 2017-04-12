@@ -12,14 +12,18 @@ h2 {
 h4 {
     font-size: 2.2vmax;
 }
-li{text-align:left;}
+
+li {
+    text-align: left;
+}
+
 .carousel-inner>.item>img, .carousel-inner>.item>a>img {
     margin: 0 auto;
 }
-.left
-{
- width:50%;
- float:left;
+
+.left {
+    width: 50%;
+    float: left;
 }
 
 .carousel-control.right, .carousel-control.left {
@@ -47,7 +51,7 @@ li{text-align:left;}
 }
 
 .navbar {
-    background:rgba(255,255,255,0.5);
+    background: rgba(255, 255, 255, 0.5);
     transition: background-color 1s ease 0s;
     border: none;
 }
@@ -137,23 +141,30 @@ li{text-align:left;}
 }
 
 .arrow {
-  -webkit-animation: arrow-jump 1.5s infinite;
-  -moz-animation:    arrow-jump 1.5s infinite;
-  -o-animation:      arrow-jump 1.5s infinite;
-  animation:         arrow-jump 1.5s infinite;
+    -webkit-animation: arrow-jump 1.5s infinite;
+    -moz-animation: arrow-jump 1.5s infinite;
+    -o-animation: arrow-jump 1.5s infinite;
+    animation: arrow-jump 1.5s infinite;
 }
-.floatright{
-float:right;
+
+.floatright {
+    float: right;
 }
-.floatleft{
-float:left;
+
+.floatleft {
+    float: left;
 }
-.displayblock{
-  display: block;
+
+.displayblock {
+    display: block;
 }
+
 @-webkit-keyframes arrow-jump {
-  0%   { opacity: 0;}
-  100% { opacity: 1;
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
         -webkit-transform: translateY(10px);
         -moz-transform: translateY(10px);
         -0-transform: translateY(10px);
@@ -215,6 +226,7 @@ float:left;
     bottom: 0;
     right: 50%;
 }
+
 #googleMap {
     width: 100%;
     height: 420px;
