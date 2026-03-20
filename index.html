@@ -1,17 +1,23 @@
-<!DOCTYPE HTML>
-
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <title>Qingbo Jiang's Homepage</title>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="description" content="Qingbo Jiang - Software Developer Portfolio">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Qingbo Jiang - Senior Software Engineer Portfolio">
+    <meta name="keywords" content="Qingbo Jiang, Software Engineer, Developer, Portfolio, Full Stack, Android, Web Development">
+    <meta name="author" content="Qingbo Jiang">
+    
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Qingbo Jiang - Senior Software Engineer">
+    <meta property="og:description" content="Senior Software Engineer with expertise in full-stack development, mobile applications, and cloud technologies.">
+    <meta property="og:type" content="website">
+    
+    <title>Qingbo Jiang | Senior Software Engineer</title>
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -27,42 +33,50 @@
     <script src="index.js"></script>
 </head>
 
-<body id="myPage" data-bs-spy="scroll" data-bs-target="#aNavbar" data-bs-offset="60">
+<body id="myPage" data-bs-spy="scroll" data-bs-target="#aNavbar" data-bs-offset="80">
+    
+    <!-- Skip to main content link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-light navbar-fixed-top navbar-opacity" id="aNavbar">
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top navbar-opacity" id="aNavbar" role="navigation" aria-label="Main navigation">
         <div class="container">
-            <a class="navbar-brand" href="#myPage">
-                <i class="fa-solid fa-house"></i> Home
+            <a class="navbar-brand" href="#myPage" aria-label="Home">
+                <i class="fas fa-code"></i> <span class="d-none d-lg-inline">Qingbo Jiang</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="myNavbar">
-                <ul class="nav navbar-nav navbar-ms-auto">
+                <ul class="nav navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">
-                            <i class="fa-solid fa-user"></i> About
+                        <a class="nav-link" href="#about" aria-label="About section">
+                            <i class="fas fa-user"></i> <span class="d-none d-lg-inline">About</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#experience">
-                            <i class="fa-solid fa-briefcase"></i> Experience
+                        <a class="nav-link" href="#skills" aria-label="Skills section">
+                            <i class="fas fa-laptop-code"></i> <span class="d-none d-lg-inline">Skills</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#portfolio">
-                            <i class="fa-solid fa-th"></i> Portfolio
+                        <a class="nav-link" href="#experience" aria-label="Experience section">
+                            <i class="fas fa-briefcase"></i> <span class="d-none d-lg-inline">Experience</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#resume">
-                            <i class="fa-solid fa-graduation-cap"></i> Resume
+                        <a class="nav-link" href="#portfolio" aria-label="Portfolio section">
+                            <i class="fas fa-th"></i> <span class="d-none d-lg-inline">Portfolio</span>
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">
-                            <i class="fa-solid fa-envelope"></i> Contact
+                        <a class="nav-link" href="#resume" aria-label="Resume section">
+                            <i class="fas fa-file-alt"></i> <span class="d-none d-lg-inline">Resume</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" aria-label="Contact section">
+                            <i class="fas fa-envelope"></i> <span class="d-none d-lg-inline">Contact</span>
                         </a>
                     </li>
                 </ul>
@@ -71,71 +85,209 @@
     </nav>
 
     <!-- Hero Section (CN Tower) -->
-    <div class="background-cntower">
-        <h2>Qingbo Jiang</h2>
-        <h4>No dream is too big. No challenge is too great.</h4>
-        <a id="bottm-center" href="#about">
-            <i class="fa-solid fa-chevron-down"></i>
-        </a>
+    <div class="background-cntower" role="banner">
+        <div class="hero-content">
+            <h2 class="display-1 fw-bold">Qingbo Jiang</h2>
+            <h4 class="lead">Senior Software Engineer</h4>
+            <p class="hero-quote">No dream is too big. No challenge is too great.</p>
+            <div class="hero-actions">
+                <a href="#portfolio" class="btn btn-primary btn-lg me-3" aria-label="View portfolio">
+                    <i class="fas fa-folder-open"></i> View My Work
+                </a>
+                <a href="#contact" class="btn btn-outline-light btn-lg" aria-label="Contact me">
+                    <i class="fas fa-envelope"></i> Get In Touch
+                </a>
+            </div>
+            <a id="bottm-center" href="#about" aria-label="Scroll to about section">
+                <i class="fa-solid fa-chevron-down"></i>
+            </a>
+        </div>
     </div>
 
+    <!-- Main Content Area -->
+    <main id="main-content">
+    
     <!-- About Section -->
-    <div id="about">
+    <div id="about" class="section" aria-labelledby="about-heading">
         <div class="container-fluid">
             <div class="row align-items-center">
                 <div class="col-lg-5 order-lg-2">
-                    <img class="img-fluid rounded-xl w3-image" src="assets/images/myprofilepicture2.jpg" alt="Qingbo Jiang">
+                    <div class="profile-image-wrapper">
+                        <img class="img-fluid rounded-xl w3-image" src="assets/images/myprofilepicture2.jpg" alt="Qingbo Jiang - Senior Software Engineer">
+                        <div class="profile-badge">
+                            <i class="fas fa-code"></i>
+                        </div>
+                    </div>
                 </div>
                 <div class="col-lg-7 order-lg-1">
-                    <h3>About Me</h3>
-                    <ul>
-                        <li>I am a software developer with many years of industry experience building complex mobile and web applications</li>
-                        <li>I love all aspects of software development. I have done <span>mobile</span>, <span>frontend</span>, <span>backend</span> as well as <span>dev-ops</span>!</li>
-                        <li><span>3D printing</span> enthusiast and enjoy creating cool things with <span>arduino</span></li>
-                        <li>Traveler and love experiencing new things</li>
-                        <li>I love StarCraft: Broodwar and Dota 2 and dream of competing at a professional level one day</li>
-                        <li>I enjoyed creating <u><a target="_blank" href="https://www.youtube.com/user/runescapegame">youtube</a></u> videos before programming</li>
-                        <li>Avid swiss watch collector</li>
-                        <li>Fan of Japanese culture. Collecting action figures, watching anime and reading mangas</li>
-                        <li>I am an aspiring professional gamer, streamer, investor, and the world's greatest <span>entrepreneur</span></li>
-                        <li>I strive to improve each and everyday</li>
-                        <li>Tesla enthusiast and proud owner</li>
-                        <li>I want to one day make an <span>impact</span> in the world and improve lives around the world</li>
+                    <h3 id="about-heading">About Me</h3>
+                    <p class="lead">A passionate software developer with extensive industry experience building complex mobile and web applications.</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check-circle"></i> Full-stack developer with expertise in <span>mobile</span>, <span>frontend</span>, <span>backend</span>, and <span>DevOps</span></li>
+                        <li><i class="fas fa-check-circle"></i> 3D printing enthusiast creating innovative projects with <span>Arduino</span></li>
+                        <li><i class="fas fa-check-circle"></i> Travel enthusiast and culture explorer</li>
+                        <li><i class="fas fa-check-circle"></i> Competitive gamer passionate about strategy and teamwork</li>
+                        <li><i class="fas fa-check-circle"></i> Swiss watch collector with appreciation for precision engineering</li>
+                        <li><i class="fas fa-check-circle"></i> Anime and manga enthusiast, appreciating Japanese culture</li>
+                        <li><i class="fas fa-check-circle"></i> Aspiring entrepreneur and lifelong learner</li>
+                        <li><i class="fas fa-check-circle"></i> Committed to continuous self-improvement and growth</li>
+                        <li><i class="fas fa-check-circle"></i> Tesla owner and technology enthusiast</li>
+                        <li><i class="fas fa-check-circle"></i> Dedicated to making a positive impact on the world</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
+    <!-- Skills Section -->
+    <div id="skills" class="section section-dark">
+        <div class="container">
+            <h3 class="section-title text-center">Technical Skills</h3>
+            <p class="section-subtitle text-center">A comprehensive overview of my technical expertise and technologies I work with daily.</p>
+            
+            <div class="skills-grid">
+                <!-- Frontend -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-desktop"></i>
+                        <h4>Frontend Development</h4>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">TypeScript</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">HTML5/CSS3</span>
+                        <span class="skill-tag">Bootstrap</span>
+                        <span class="skill-tag">Angular</span>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-server"></i>
+                        <h4>Backend Development</h4>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Spring Boot</span>
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">GraphQL</span>
+                        <span class="skill-tag">Microservices</span>
+                    </div>
+                </div>
+
+                <!-- Mobile -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-mobile-alt"></i>
+                        <h4>Mobile Development</h4>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag">Android (Kotlin/Java)</span>
+                        <span class="skill-tag">Ionic</span>
+                        <span class="skill-tag">Android Jetpack</span>
+                        <span class="skill-tag">MVVM Architecture</span>
+                        <span class="skill-tag">Dagger 2</span>
+                        <span class="skill-tag">Retrofit</span>
+                    </div>
+                </div>
+
+                <!-- DevOps & Cloud -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-cloud"></i>
+                        <h4>DevOps & Cloud</h4>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag">AWS</span>
+                        <span class="skill-tag">Terraform</span>
+                        <span class="skill-tag">Docker</span>
+                        <span class="skill-tag">CI/CD Pipelines</span>
+                        <span class="skill-tag">Jenkins</span>
+                        <span class="skill-tag">GitLab CI</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Technologies -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-tools"></i>
+                        <h4>Tools & Technologies</h4>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">Linux</span>
+                        <span class="skill-tag">MongoDB</span>
+                        <span class="skill-tag">PostgreSQL</span>
+                        <span class="skill-tag">Redis</span>
+                        <span class="skill-tag">Kubernetes</span>
+                    </div>
+                </div>
+
+                <!-- Architecture & Design -->
+                <div class="skill-category">
+                    <div class="skill-header">
+                        <i class="fas fa-project-diagram"></i>
+                        <h4>Architecture & Design</h4>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag">System Design</span>
+                        <span class="skill-tag">Design Patterns</span>
+                        <span class="skill-tag">Agile/Scrum</span>
+                        <span class="skill-tag">Code Review</span>
+                        <span class="skill-tag">Mentoring</span>
+                        <span class="skill-tag">Technical Leadership</span>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
     <!-- Work Experience Section -->
-    <div id="experience" class="text-center">
-        <h3>Work Experience</h3>
-        
-        <!-- Dropbox -->
-        <div class="row experience-row">
-            <div class="col-lg-10 mx-auto">
-                <h3 class="company-name">
-                    <a target="_blank" href="https://dropbox.com/">Dropbox</a>
-                </h3>
-                <h3 class="date">October 2022 - Present</h3>
-                <h5 class="job-title">Senior Software Engineer</h5>
-                <ul class="text-start">
+    <div id="experience" class="section" aria-labelledby="experience-heading">
+        <div class="container">
+            <h3 id="experience-heading" class="section-title text-center">Work Experience</h3>
+            <p class="section-subtitle text-center">My professional journey and the companies I've had the privilege to work with.</p>
+            
+            <!-- Dropbox -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-logo">
+                        <img src="assets/images/dropbox_icon.svg" alt="Dropbox Logo">
+                    </div>
+                    <div class="experience-info">
+                        <h3 class="company-name">
+                            <a target="_blank" href="https://dropbox.com/" aria-label="Visit Dropbox website">Dropbox</a>
+                        </h3>
+                        <p class="job-title">Senior Software Engineer</p>
+                        <p class="date"><i class="far fa-calendar-alt"></i> October 2022 - Present</p>
+                    </div>
+                </div>
+                <ul class="achievements-list">
                     <li>Key engineer for the implementation and migration of Privacy Consent tools from third party Crownpeak integration to an in-house solution</li>
                     <li>Led & built metrics, alerts & logging for Privacy Consent to ensure system health and gather useful metrics to determine user behaviour</li>
                     <li>Mentored junior engineers and created projects to showcase their talents</li>
                 </ul>
             </div>
-        </div>
 
-        <!-- Amazon -->
-        <div class="row experience-row">
-            <div class="col-lg-10 mx-auto">
-                <h3 class="company-name">
-                    <a target="_blank" href="https://amazon.com/">Amazon</a>
-                </h3>
-                <h3 class="date">July 2019 - October 2022</h3>
-                <h5 class="job-title">Software Development Engineer II</h5>
-                <ul class="text-start">
+            <!-- Amazon -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-logo">
+                        <img src="assets/images/aws-logo.jpg" alt="Amazon Web Services Logo">
+                    </div>
+                    <div class="experience-info">
+                        <h3 class="company-name">
+                            <a target="_blank" href="https://amazon.com/" aria-label="Visit Amazon website">Amazon</a>
+                        </h3>
+                        <p class="job-title">Software Development Engineer II</p>
+                        <p class="date"><i class="far fa-calendar-alt"></i> July 2019 - October 2022</p>
+                    </div>
+                </div>
+                <ul class="achievements-list">
                     <li>Lead & built new SLAM redesign from scratch. Spearheaded design, gathered requirements, ensured code standard, implemented latest tools and technologies</li>
                     <li>Wrote lambdas from scratch and deployed them with API gateway using CDK</li>
                     <li>Responsible for launching in new regions for AWS Simple Workflow</li>
@@ -147,17 +299,22 @@
                     <li>Mentored less experienced members</li>
                 </ul>
             </div>
-        </div>
 
-        <!-- XE -->
-        <div class="row experience-row">
-            <div class="col-lg-10 mx-auto">
-                <h3 class="company-name">
-                    <a target="_blank" href="http://www.xe.com">XE.com</a>
-                </h3>
-                <h3 class="date">May 2017 - July 2021</h3>
-                <h5 class="job-title">Software Developer (Full Stack)</h5>
-                <ul class="text-start">
+            <!-- XE -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-logo">
+                        <img src="assets/images/xe-logo.png" alt="XE.com Logo">
+                    </div>
+                    <div class="experience-info">
+                        <h3 class="company-name">
+                            <a target="_blank" href="http://www.xe.com" aria-label="Visit XE.com website">XE.com</a>
+                        </h3>
+                        <p class="job-title">Software Developer (Full Stack)</p>
+                        <p class="date"><i class="far fa-calendar-alt"></i> May 2017 - July 2021</p>
+                    </div>
+                </div>
+                <ul class="achievements-list">
                     <li>Maintained and added new functionalities to our enterprise software XECD & Rates API as well as R&D new Rates Collectors in Spring Boot from scratch</li>
                     <li>Lead the Ria integration with Currency App. Coordinated between 3 global offices, development & launching to production</li>
                     <li>R&D new Rates Collectors in Spring Boot from scratch</li>
@@ -171,14 +328,22 @@
                     <li>Contributed to improvements to Rate Alerts PHP web app such as region detection for GDPR compliance</li>
                 </ul>
             </div>
-        </div>
 
-        <!-- XE Android -->
-        <div class="row experience-row">
-            <div class="col-lg-10 mx-auto">
-                <h3 class="date">May 2017 - April 2019</h3>
-                <h5 class="job-title">Software Developer (Android)</h5>
-                <ul class="text-start">
+            <!-- XE Android -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-logo">
+                        <img src="assets/images/xe-logo.png" alt="XE.com Logo">
+                    </div>
+                    <div class="experience-info">
+                        <h3 class="company-name">
+                            <a target="_blank" href="http://www.xe.com" aria-label="Visit XE.com website">XE.com (Android Team)</a>
+                        </h3>
+                        <p class="job-title">Software Developer (Android)</p>
+                        <p class="date"><i class="far fa-calendar-alt"></i> May 2017 - April 2019</p>
+                    </div>
+                </div>
+                <ul class="achievements-list">
                     <li>Integrated SSO (Cognito) with existing Android Apps</li>
                     <li>Rebuilt the XE Currency App from the ground up as one of the key developers</li>
                     <li>Built XE Travel App from scratch as one of the key developers</li>
@@ -186,17 +351,22 @@
                     <li>Took ownership of many parts of the app as well as R&D of future enhancements</li>
                 </ul>
             </div>
-        </div>
 
-        <!-- Serind Labs -->
-        <div class="row experience-row">
-            <div class="col-lg-10 mx-auto">
-                <h3 class="company-name">
-                    <a target="_blank" href="http://www.serindlabs.com">Serind Labs</a>
-                </h3>
-                <h3 class="date">Jan 2017 - May 2017</h3>
-                <h5 class="job-title">Android Developer</h5>
-                <ul class="text-start">
+            <!-- Serind Labs -->
+            <div class="experience-card">
+                <div class="experience-header">
+                    <div class="company-logo">
+                        <img src="assets/images/Pzizz_Logo.png" alt="Pzizz Logo">
+                    </div>
+                    <div class="experience-info">
+                        <h3 class="company-name">
+                            <a target="_blank" href="http://www.serindlabs.com" aria-label="Visit Serind Labs website">Serind Labs</a>
+                        </h3>
+                        <p class="job-title">Android Developer</p>
+                        <p class="date"><i class="far fa-calendar-alt"></i> Jan 2017 - May 2017</p>
+                    </div>
+                </div>
+                <ul class="achievements-list">
                     <li>Primary developer for Pzizz Redesign — #1 sleeping app in the USA</li>
                     <li>Collaborated with audio engineers to create the audio engine powered by libpd</li>
                     <li>Developed cross platform session saving/retrieval using realm db and okhttp</li>
@@ -207,241 +377,286 @@
     </div>
 
     <!-- Portfolio Section -->
-    <div id="portfolio" class="text-center">
-        <h3>Portfolio</h3>
-        
-        <!-- Portfolio Tabs -->
-        <ul class="nav nav-tabs mb-4">
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#personal">Personal</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link active" data-bs-toggle="tab" href="#work">Work</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" data-bs-toggle="tab" href="#academic">Academic</a>
-            </li>
-        </ul>
+    <div id="portfolio" class="section section-dark" aria-labelledby="portfolio-heading">
+        <div class="container">
+            <h3 id="portfolio-heading" class="section-title text-center">Portfolio</h3>
+            <p class="section-subtitle text-center">A showcase of my projects across personal, professional, and academic domains.</p>
+            
+            <!-- Portfolio Tabs -->
+            <ul class="nav nav-tabs mb-4" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#personal" type="button" role="tab" aria-controls="personal" aria-selected="false">
+                        <i class="fas fa-user"></i> Personal Projects
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#work" type="button" role="tab" aria-controls="work" aria-selected="true">
+                        <i class="fas fa-briefcase"></i> Professional Work
+                    </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#academic" type="button" role="tab" aria-controls="academic" aria-selected="false">
+                        <i class="fas fa-graduation-cap"></i> Academic Projects
+                    </button>
+                </li>
+            </ul>
 
-        <!-- Personal Projects -->
-        <div class="tab-content">
-            <div id="personal" class="tab-pane fade">
-                <div class="row">
-                    <div class="col-lg-10 mx-auto">
-                        <div class="thumbnail hover-lift">
-                            <h3><img src="assets/images/advancetipsplitshare_logo.png" style="width:50px;height:50px;"> Advance Tip Split Share</h3>
-                            <br>
-                            <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
-                                    <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
-                                    <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
-                                    <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot.jpg" alt="Advance Tip Split Share">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot2.jpg" alt="Advance Tip Split Share">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot3.jpg" alt="Advance Tip Split Share">
-                                    </div>
-                                    <div class="carousel-item">
-                                        <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot4.jpg" alt="Advance Tip Split Share">
-                                    </div>
-                                </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                            <br>
-                            <p>The world's most advanced bill splitting app. It contains three different modes: even split, buffet mode and custom bill. It has an option calculate tip before tax. Sending bill has never been easier with the send bill button, sending the complete calculation of any bill to your friends via SMS or any social media platform, making dining simple and great again.</p>
-                            <p>Click <a target="_blank" href="http://www.goo.gl/czghyy">here</a> to check it out!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Work Portfolio -->
-            <div id="work" class="tab-pane fade show active">
-                <p class="mb-4">Consumer facing published work I have been a part of:</p>
-                <div class="row">
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="thumbnail hover-lift">
-                            <img src="assets/images/dropbox_icon.svg" alt="Dropbox" class="img-fluid">
-                            <h3>Dropbox</h3>
-                            <p>Dropbox is a cloud storage service that lets you save files online and sync them to your devices.</p>
-                            <p>Click <a target="_blank" href="https://dropbox.com/">here</a> to check out Dropbox!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="thumbnail hover-lift">
-                            <img src="assets/images/aws-logo.jpg" alt="Amazon Web Services" class="img-fluid">
-                            <h3>Amazon Web Services</h3>
-                            <p>Tier 1 service - Simple Workflow. This service is used by millions of customers including many other AWS services.</p>
-                            <p>Click <a target="_blank" href="https://aws.amazon.com/swf/">here</a> to check out Simple Workflow!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="thumbnail hover-lift">
-                            <img src="assets/images/amazon-ads.png" alt="Amazon Advertising" class="img-fluid">
-                            <h3>Amazon Advertising</h3>
-                            <p>Built many internal tools and services to help Data Engineers tackle big data related problems.</p>
-                            <p>Click <a target="_blank" href="https://advertising.amazon.com/">here</a> to check out Amazon Advertising!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="thumbnail hover-lift">
-                            <img src="assets/images/xe-apollo.webp" alt="Login API" class="img-fluid">
-                            <h3>Login API</h3>
-                            <p>Single Sign On API used by various XE products to allow frictionless login between different products powered by AWS Cognito.</p>
-                            <p>Click <a target="_blank" href="https://play.google.com/store/apps/details?id=com.xe.currency&hl=en_CA&gl=US">here</a> to check the app that leverages Login API out!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="thumbnail hover-lift">
-                            <img src="assets/images/xecd.png" alt="XE Currency Data" class="img-fluid">
-                            <h3>XE Currency Data</h3>
-                            <p>Industry leading currency converter API & exchange rate API from XE. Integrate data easily with JSON, CSV, or XML formats.</p>
-                            <p>Click <a target="_blank" href="https://www.xe.com/xecurrencydata/">here</a> to check it out!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="thumbnail hover-lift">
-                            <img src="assets/images/xe-logo2.png" alt="XE Single Sign On" class="img-fluid">
-                            <h3>XE Single Sign On</h3>
-                            <p>Accounts.xe.com leverages on Login API. Frontend is developed with React and backend is developed using Node.js</p>
-                            <p>Click <a target="_blank" href="https://accounts.xe.com/login?client_id=7v3mjop0iq74d7bdpgvn95r86d&redirect_uri=https%3A%2F%2Ftransfer.xe.com%2Faccount%2Flogin%2Fhome&response_type=code&state=">here</a> to check it out!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="thumbnail hover-lift">
-                            <img src="assets/images/ratealerts.png" alt="XE Rate Alerts" class="img-fluid">
-                            <h3>XE Rate Alerts</h3>
-                            <p>XERA watches the market for you. Set an alert so you never miss your desired rate.</p>
-                            <p>Click <a target="_blank" href="https://www.xe.com/ratealerts/">here</a> to check it out!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="thumbnail hover-lift">
-                            <img src="assets/images/xe-logo.png" alt="XE Currency App" class="img-fluid">
-                            <h3>XE Currency App (Redesign)</h3>
-                            <p>XE Currency is your go to currency app for international money transfers, travel, shopping, and personal use.</p>
-                            <p>Click <a target="_blank" href="https://www.apkmirror.com/apk/xe-com-inc/xe-currency/xe-currency-6-5-6-release/">here</a> to check it out!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="thumbnail hover-lift">
-                            <img src="assets/images/com.xe.moneytransfer-w130.webp" alt="XE Money Transfer App" class="img-fluid">
-                            <h3>XE Money Transfer App</h3>
-                            <p>XE Money Transfer is the quick, easy, and secure way to transfer money around the globe.</p>
-                            <p>Click <a target="_blank" href="https://apkcombo.com/xe-money-transfer/com.xe.moneytransfer/">here</a> to check it out!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="thumbnail hover-lift">
-                            <img src="assets/images/xe-travel.png" alt="XE Travel App" class="img-fluid">
-                            <h3>XE Travel App</h3>
-                            <p>XE, The World's Trusted Currency Authority, has just created an app specifically for travelers who want to budget and record their trip expenses.</p>
-                            <p>Click <a target="_blank" href="https://m.apkpure.com/xe-travel/com.xe.travel">here</a> to check it out!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="thumbnail hover-lift">
-                            <img src="assets/images/og_xe_app.png" alt="XE Currency App Original" class="img-fluid">
-                            <h3>XE Currency App (Original)</h3>
-                            <p>Since 2009, XE Currency been connecting the world through currency exchange by providing reliable exchange rates and charts for free.</p>
-                            <p>Click <a target="_blank" href="https://www.apkmirror.com/apk/xe-com-inc/xe-currency/xe-currency-5-1-0-release/">here</a> to check it out!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="thumbnail hover-lift">
-                            <img src="assets/images/Pzizz_Logo.png" alt="Pzizz App" class="img-fluid">
-                            <h3>Pzizz App</h3>
-                            <p>Pzizz delivers sleep at the push of a button! Using the science of psychoacoustics, the app's patented algorithm plays you a sleep-optimized mix of music, voiceover, and sound effects to quickly quiet your mind, put you to sleep, keep you asleep, and then wake you up feeling refreshed.</p>
-                            <p>Click <a target="_blank" href="https://play.google.com/store/apps/details?id=com.pzizz.android">here</a> to check it out!</p>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
-                        <div class="thumbnail hover-lift">
-                            <img src="assets/images/WRKS_Logo.png" alt="WRKS" class="img-fluid">
-                            <h3>WRKS</h3>
-                            <p>WRKS matches eager and capable internship/apprenticeship job seekers with nearby employers in the construction and development world. Employers have access to a team page where they can collaborate with other members of the hiring team. Job seekers can build their profile with their education, experience, field, and type of work. Job seekers are instantly notified when employers request a connection. If the job seeker accepts the request, then a chat feature is enabled - allowing the conversation to begin.</p>
-                            <p>Click <a target="_blank" href="https://play.google.com/store/apps/details?id=com.wrks.wrks">here</a> to check it out!</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Academic Projects -->
-            <div id="academic" class="tab-pane fade">
-                <p class="mb-4">Some of my academic projects from my last semester.</p>
-                <div id="academicprojs">
+            <!-- Personal Projects -->
+            <div class="tab-content">
+                <div id="personal" class="tab-pane fade" role="tabpanel" aria-labelledby="personal-tab">
                     <div class="row">
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="thumbnail hover-lift">
-                                <h3>Library Watchdog</h3>
-                                <img class="img-fluid" src="assets/images/robotics.jpg" alt="Library Watchdog">
-                                <p>The library watchdog was created to keep the library quiet. It will constantly scan the surrounding area for the loudest noise and move towards it. Once it finds the noise source, it will tell the noisemaker to quiet down. It is equipped with the latest technology which allows it to avoid falling off platforms, and avoid obstacles. This has many other utilizations such being used as a scout to find trapped survivors during an earthquake.</p>
-                                <p>Click <a onclick="onVideoClick('assets/videos/Final Robotics Project.webm');" style="cursor: pointer;">here</a> to check it out in action!</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="thumbnail hover-lift">
-                                <h3>Online Chat</h3>
-                                <img class="img-fluid" src="assets/images/babbletext.jpg" alt="BabbleT">
-                                <p>BabbleT is a free web application that allows you to chat in real time with new instantly people every day from anywhere. BabbleT finds people with similar interests by letting you search or enter the topic you want to talk about. Users can also customize their profiles and display pictures to their own liking.</p>
-                                <p>Click <a target="_blank" href="http://babbletxt.com/">here</a> to check it out!</p>
-                            </div>
-                        </div>
-                        <div class="col-lg-4 col-md-12 mb-4">
-                            <div id="myCarousel2" class="carousel slide" data-bs-ride="carousel">
-                                <ol class="carousel-indicators">
-                                    <li data-bs-target="#myCarousel2" data-bs-slide-to="0" class="active"></li>
-                                    <li data-bs-target="#myCarousel2" data-bs-slide-to="1"></li>
-                                    <li data-bs-target="#myCarousel2" data-bs-slide-to="2"></li>
-                                </ol>
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                        <div class="thumbnail hover-lift">
-                                            <h3>Weather App</h3>
-                                            <img class="img-fluid" src="assets/images/weatherapp.jpg" alt="Weather App">
-                                            <p>This weather app allows you to check weather in cities from all over the world! Just enter the city name and watch it fetch all the data. Data is parsed from openweathermap.org in JSON format. Comes with 7 days long term forcast and 3-hours shorterm forcast.</p>
-                                            <p>Click <a target="_blank" href="weather.html">here</a> to check it out!</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="thumbnail hover-lift">
-                                            <h3>Distance</h3>
-                                            <img class="img-fluid" src="assets/images/distanceapp.png" alt="Distance App">
-                                            <p>Handy tool to get the location by uploading co-ordinates by dragging a textfile to the area and can find your current location as well. Uses reverse geolocation to find the address for each set of lon and lat. This app uses a web worker to calculate the distance between the two points.</p>
-                                            <p>Click <a target="_blank" href="distance.html">here</a> to check it out!</p>
-                                        </div>
-                                    </div>
-                                    <div class="carousel-item">
-                                        <div class="thumbnail hover-lift">
-                                            <h3>Todo List</h3>
-                                            <img class="img-fluid" src="assets/images/todolistapp.png" alt="Todo List">
-                                            <p>A very interactive angular todo app. Handy tool keep track and add to your to-do list. It will help you remove duplicates, and has two different lists for moving a task from todo to completed.</p>
-                                            <p>Click <a target="_blank" href="todolist.html">here</a> to check it out!</p>
-                                        </div>
-                                    </div>
+                        <div class="col-lg-10 mx-auto">
+                            <div class="portfolio-card">
+                                <div class="portfolio-header">
+                                    <h3><img src="assets/images/advancetipsplitshare_logo.png" style="width:50px;height:50px;"> Advance Tip Split Share</h3>
                                 </div>
-                                <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel2" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-                                <button class="carousel-control-next" type="button" data-bs-target="#myCarousel2" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
+                                <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Advance Tip Split Share screenshots">
+                                    <ol class="carousel-indicators">
+                                        <li data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></li>
+                                        <li data-bs-target="#myCarousel" data-bs-slide-to="1"></li>
+                                        <li data-bs-target="#myCarousel" data-bs-slide-to="2"></li>
+                                        <li data-bs-target="#myCarousel" data-bs-slide-to="3"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot.jpg" alt="Advance Tip Split Share - Main Interface">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot2.jpg" alt="Advance Tip Split Share - Buffet Mode">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot3.jpg" alt="Advance Tip Split Share - Custom Bill Mode">
+                                        </div>
+                                        <div class="carousel-item">
+                                            <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot4.jpg" alt="Advance Tip Split Share - Send Bill Feature">
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev" aria-label="Previous slide">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next" aria-label="Next slide">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    </button>
+                                </div>
+                                <div class="portfolio-body">
+                                    <p>The world's most advanced bill splitting app. It contains three different modes: even split, buffet mode and custom bill. It has an option calculate tip before tax. Sending bill has never been easier with the send bill button, sending the complete calculation of any bill to your friends via SMS or any social media platform, making dining simple and great again.</p>
+                                    <a target="_blank" href="http://www.goo.gl/czghyy" class="btn btn-primary mt-3">
+                                        <i class="fas fa-external-link-alt"></i> View App
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Work Portfolio -->
+                <div id="work" class="tab-pane fade show active" role="tabpanel" aria-labelledby="work-tab">
+                    <p class="mb-4">Consumer facing published work I have been a part of:</p>
+                    <div class="row g-4">
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="portfolio-card">
+                                <img src="assets/images/dropbox_icon.svg" alt="Dropbox" class="portfolio-logo">
+                                <h3>Dropbox</h3>
+                                <p>Dropbox is a cloud storage service that lets you save files online and sync them to your devices.</p>
+                                <a target="_blank" href="https://dropbox.com/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt"></i> Visit Site
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="portfolio-card">
+                                <img src="assets/images/aws-logo.jpg" alt="Amazon Web Services" class="portfolio-logo">
+                                <h3>Amazon Web Services</h3>
+                                <p>Tier 1 service - Simple Workflow. This service is used by millions of customers including many other AWS services.</p>
+                                <a target="_blank" href="https://aws.amazon.com/swf/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt"></i> Visit Site
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="portfolio-card">
+                                <img src="assets/images/amazon-ads.png" alt="Amazon Advertising" class="portfolio-logo">
+                                <h3>Amazon Advertising</h3>
+                                <p>Built many internal tools and services to help Data Engineers tackle big data related problems.</p>
+                                <a target="_blank" href="https://advertising.amazon.com/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt"></i> Visit Site
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="portfolio-card">
+                                <img src="assets/images/xe-apollo.webp" alt="Login API" class="portfolio-logo">
+                                <h3>Login API</h3>
+                                <p>Single Sign On API used by various XE products to allow frictionless login between different products powered by AWS Cognito.</p>
+                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.xe.currency&hl=en_CA&gl=US" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt"></i> View App
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="portfolio-card">
+                                <img src="assets/images/xecd.png" alt="XE Currency Data" class="portfolio-logo">
+                                <h3>XE Currency Data</h3>
+                                <p>Industry leading currency converter API & exchange rate API from XE. Integrate data easily with JSON, CSV, or XML formats.</p>
+                                <a target="_blank" href="https://www.xe.com/xecurrencydata/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt"></i> Visit Site
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="portfolio-card">
+                                <img src="assets/images/xe-logo2.png" alt="XE Single Sign On" class="portfolio-logo">
+                                <h3>XE Single Sign On</h3>
+                                <p>Accounts.xe.com leverages on Login API. Frontend is developed with React and backend is developed using Node.js</p>
+                                <a target="_blank" href="https://accounts.xe.com/login?client_id=7v3mjop0iq74d7bdpgvn95r86d&redirect_uri=https%3A%2F%2Ftransfer.xe.com%2Faccount%2Flogin%2Fhome&response_type=code&state=" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt"></i> Visit Site
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="portfolio-card">
+                                <img src="assets/images/ratealerts.png" alt="XE Rate Alerts" class="portfolio-logo">
+                                <h3>XE Rate Alerts</h3>
+                                <p>XERA watches the market for you. Set an alert so you never miss your desired rate.</p>
+                                <a target="_blank" href="https://www.xe.com/ratealerts/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt"></i> Visit Site
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="portfolio-card">
+                                <img src="assets/images/xe-logo.png" alt="XE Currency App" class="portfolio-logo">
+                                <h3>XE Currency App (Redesign)</h3>
+                                <p>XE Currency is your go to currency app for international money transfers, travel, shopping, and personal use.</p>
+                                <a target="_blank" href="https://www.apkmirror.com/apk/xe-com-inc/xe-currency/xe-currency-6-5-6-release/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="portfolio-card">
+                                <img src="assets/images/com.xe.moneytransfer-w130.webp" alt="XE Money Transfer App" class="portfolio-logo">
+                                <h3>XE Money Transfer App</h3>
+                                <p>XE Money Transfer is the quick, easy, and secure way to transfer money around the globe.</p>
+                                <a target="_blank" href="https://apkcombo.com/xe-money-transfer/com.xe.moneytransfer/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="portfolio-card">
+                                <img src="assets/images/xe-travel.png" alt="XE Travel App" class="portfolio-logo">
+                                <h3>XE Travel App</h3>
+                                <p>XE, The World's Trusted Currency Authority, has just created an app specifically for travelers who want to budget and record their trip expenses.</p>
+                                <a target="_blank" href="https://m.apkpure.com/xe-travel/com.xe.travel" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="portfolio-card">
+                                <img src="assets/images/og_xe_app.png" alt="XE Currency App Original" class="portfolio-logo">
+                                <h3>XE Currency App (Original)</h3>
+                                <p>Since 2009, XE Currency been connecting the world through currency exchange by providing reliable exchange rates and charts for free.</p>
+                                <a target="_blank" href="https://www.apkmirror.com/apk/xe-com-inc/xe-currency/xe-currency-5-1-0-release/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="portfolio-card">
+                                <img src="assets/images/Pzizz_Logo.png" alt="Pzizz App" class="portfolio-logo">
+                                <h3>Pzizz App</h3>
+                                <p>Pzizz delivers sleep at the push of a button! Using the science of psychoacoustics, the app's patented algorithm plays you a sleep-optimized mix of music, voiceover, and sound effects to quickly quiet your mind, put you to sleep, keep you asleep, and then wake you up feeling refreshed.</p>
+                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.pzizz.android" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-4 col-sm-6">
+                            <div class="portfolio-card">
+                                <img src="assets/images/WRKS_Logo.png" alt="WRKS" class="portfolio-logo">
+                                <h3>WRKS</h3>
+                                <p>WRKS matches eager and capable internship/apprenticeship job seekers with nearby employers in the construction and development world.</p>
+                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.wrks.wrks" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt"></i> Download
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Projects -->
+                <div id="academic" class="tab-pane fade" role="tabpanel" aria-labelledby="academic-tab">
+                    <p class="mb-4">Some of my academic projects from my last semester.</p>
+                    <div id="academicprojs">
+                        <div class="row g-4">
+                            <div class="col-lg-4 col-md-6">
+                                <div class="portfolio-card">
+                                    <h3>Library Watchdog</h3>
+                                    <img class="img-fluid" src="assets/images/robotics.jpg" alt="Library Watchdog Robot">
+                                    <p>The library watchdog was created to keep the library quiet. It will constantly scan the surrounding area for the loudest noise and move towards it. Once it finds the noise source, it will tell the noisemaker to quiet down. It is equipped with the latest technology which allows it to avoid falling off platforms, and avoid obstacles. This has many other utilizations such being used as a scout to find trapped survivors during an earthquake.</p>
+                                    <button class="btn btn-primary mt-3" onclick="onVideoClick('assets/videos/Final Robotics Project.webm');">
+                                        <i class="fas fa-play-circle"></i> Watch Demo
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-6">
+                                <div class="portfolio-card">
+                                    <h3>Online Chat</h3>
+                                    <img class="img-fluid" src="assets/images/babbletext.jpg" alt="BabbleT Chat Application">
+                                    <p>BabbleT is a free web application that allows you to chat in real time with new instantly people every day from anywhere. BabbleT finds people with similar interests by letting you search or enter the topic you want to talk about. Users can also customize their profiles and display pictures to their own liking.</p>
+                                    <a target="_blank" href="http://babbletxt.com/" class="btn btn-primary mt-3">
+                                        <i class="fas fa-external-link-alt"></i> Visit Site
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-lg-4 col-md-12">
+                                <div id="myCarousel2" class="carousel slide" data-bs-ride="carousel" aria-label="Academic projects carousel">
+                                    <ol class="carousel-indicators">
+                                        <li data-bs-target="#myCarousel2" data-bs-slide-to="0" class="active"></li>
+                                        <li data-bs-target="#myCarousel2" data-bs-slide-to="1"></li>
+                                        <li data-bs-target="#myCarousel2" data-bs-slide-to="2"></li>
+                                    </ol>
+                                    <div class="carousel-inner">
+                                        <div class="carousel-item active">
+                                            <div class="portfolio-card">
+                                                <h3>Weather App</h3>
+                                                <img class="img-fluid" src="assets/images/weatherapp.jpg" alt="Weather App Interface">
+                                                <p>This weather app allows you to check weather in cities from all over the world! Just enter the city name and watch it fetch all the data. Data is parsed from openweathermap.org in JSON format. Comes with 7 days long term forcast and 3-hours shorterm forcast.</p>
+                                                <a target="_blank" href="weather.html" class="btn btn-primary mt-3">
+                                                    <i class="fas fa-external-link-alt"></i> View App
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="portfolio-card">
+                                                <h3>Distance Calculator</h3>
+                                                <img class="img-fluid" src="assets/images/distanceapp.png" alt="Distance Calculator App">
+                                                <p>Handy tool to get the location by uploading co-ordinates by dragging a textfile to the area and can find your current location as well. Uses reverse geolocation to find the address for each set of lon and lat. This app uses a web worker to calculate the distance between the two points.</p>
+                                                <a target="_blank" href="distance.html" class="btn btn-primary mt-3">
+                                                    <i class="fas fa-external-link-alt"></i> View App
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="carousel-item">
+                                            <div class="portfolio-card">
+                                                <h3>Todo List App</h3>
+                                                <img class="img-fluid" src="assets/images/todolistapp.png" alt="Todo List Application">
+                                                <p>A very interactive angular todo app. Handy tool keep track and add to your to-do list. It will help you remove duplicates, and has two different lists for moving a task from todo to completed.</p>
+                                                <a target="_blank" href="todolist.html" class="btn btn-primary mt-3">
+                                                    <i class="fas fa-external-link-alt"></i> View App
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel2" data-bs-slide="prev" aria-label="Previous slide">
+                                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    </button>
+                                    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel2" data-bs-slide="next" aria-label="Next slide">
+                                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                    </button>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -451,39 +666,63 @@
     </div>
 
     <!-- Resume Section -->
-    <div id="resume" class="text-center">
-        <h3>Resume</h3>
-        <a target="_blank" href="https://docs.google.com/document/d/1YEpTCoLIH8IyhYz6D9FfWmECBxWyK_jBxTJONjo5Q7k/edit?usp=sharing">
-            <img class="img-fluid rounded-xl" src="assets/images/resume-templates.png" alt="View Resume">
-            <br><br>
-            <p>Click to view my full resume</p>
-        </a>
-    </div>
-
-    <!-- Contact Section -->
-    <div id="contact" class="text-center">
-        <h3>HOW TO REACH ME</h3>
-        <p><i>I'd love to hear from you!</i></p>
-        <br>
-        <div id="googleMap" class="w3-greyscale"></div>
-        <div id="contact-info" class="mt-4">
-            <i class="fa-solid fa-map-marker"></i>&emsp;Greater Area Toronto, Ontario, Canada<br>
-            <i class="fa-solid fa-envelope-open"></i>&emsp;<a target="_blank" href="mailto:qingbojiang@gmail.com">Email: qingbojiang@gmail.com</a>
+    <div id="resume" class="section" aria-labelledby="resume-heading">
+        <div class="container text-center">
+            <h3 id="resume-heading">Resume</h3>
+            <p class="lead">Download my complete resume to learn more about my experience and qualifications.</p>
+            <br>
+            <a target="_blank" href="https://docs.google.com/document/d/1YEpTCoLIH8IyhYz6D9FfWmECBxWyK_jBxTJONjo5Q7k/edit?usp=sharing" class="resume-link" aria-label="Download resume">
+                <img class="img-fluid rounded-xl" src="assets/images/resume-templates.png" alt="Resume Preview">
+                <br><br>
+                <p class="mb-0"><i class="fas fa-download"></i> Click to view my full resume</p>
+            </a>
         </div>
     </div>
 
+    <!-- Contact Section -->
+    <div id="contact" class="section section-dark" aria-labelledby="contact-heading">
+        <div class="container text-center">
+            <h3 id="contact-heading">Get In Touch</h3>
+            <p class="lead">I'd love to hear from you! Whether you have a question, a project idea, or just want to say hi, feel free to reach out.</p>
+            <br>
+            <div id="googleMap" class="map-container" aria-label="Map showing location in Greater Toronto Area"></div>
+            <div id="contact-info" class="mt-4">
+                <div class="contact-methods">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Greater Toronto Area, Ontario, Canada</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <a target="_blank" href="mailto:qingbojiang@gmail.com">qingbojiang@gmail.com</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-globe"></i>
+                        <a target="_blank" href="https://github.com/qingbo93">GitHub</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a target="_blank" href="https://ca.linkedin.com/in/qingbojiang">LinkedIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </main>
+
     <!-- Video Popup -->
-    <div id="video_pop" onclick="onPopClick()"></div>
+    <div id="video_pop" onclick="onPopClick()" role="dialog" aria-label="Video popup"></div>
 
     <!-- Footer -->
-    <footer>
+    <footer role="contentinfo">
         <div class="panel-footer">
             <div class="social-links">
-                <a target="_blank" href="https://github.com/qingbo93" title="GitHub">
-                    <i class="fa-brands fa-github"></i>
+                <a target="_blank" href="https://github.com/qingbo93" title="Follow me on GitHub" aria-label="GitHub profile">
+                    <i class="fab fa-github"></i>
                 </a>
-                <a target="_blank" href="https://ca.linkedin.com/in/qingbojiang" title="LinkedIn">
-                    <i class="fa-brands fa-linkedin"></i>
+                <a target="_blank" href="https://ca.linkedin.com/in/qingbojiang" title="Connect with me on LinkedIn" aria-label="LinkedIn profile">
+                    <i class="fab fa-linkedin"></i>
                 </a>
             </div>
             <p>Created and Designed by Qingbo Jiang<br> &#9400; 2016-2026</p>
