@@ -317,12 +317,12 @@ a[target="_blank"]::after {
     box-shadow: var(--shadow-xl);
 }
 
-/* Scroll down arrow */
+/* Scroll down arrow - positioned below the buttons */
 #bottm-center {
-    position: absolute;
-    bottom: 3rem;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    bottom: auto;
+    left: auto;
+    transform: none;
     color: #ffffff;
     font-size: clamp(3vmax, 5vmax, 6vmax);
     cursor: pointer;
@@ -330,10 +330,11 @@ a[target="_blank"]::after {
     transition: transform var(--transition-normal), text-shadow var(--transition-normal);
     animation: bounce 2s infinite;
     z-index: 10;
+    margin-top: 2rem;
 }
 
 #bottm-center:hover {
-    transform: translateX(-50%) scale(1.2);
+    transform: scale(1.2);
     text-shadow: 0 4px 30px rgba(255, 255, 255, 0.5);
 }
 
@@ -997,6 +998,7 @@ a[target="_blank"]::after {
 #contact {
     background: var(--gradient-primary);
     position: relative;
+    padding: clamp(4rem, 6vmax, 6rem) clamp(1.5rem, 5vw, 4rem);
 }
 
 #contact h3 {
@@ -1008,6 +1010,7 @@ a[target="_blank"]::after {
 
 #contact .lead {
     color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 0.5rem;
 }
 
 /* Map container */
@@ -1017,8 +1020,14 @@ a[target="_blank"]::after {
     filter: grayscale(100%) contrast(1.2);
     transition: filter var(--transition-normal);
     max-width: 100%;
-    height: 400px;
+    height: 100px;
     overflow: hidden;
+    background: #e2e8f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #64748b;
+    font-size: 0.875rem;
 }
 
 .map-container:hover {
@@ -1031,7 +1040,7 @@ a[target="_blank"]::after {
     flex-wrap: wrap;
     justify-content: center;
     gap: 2rem;
-    margin-top: 2rem;
+    margin-top: 0.5rem;
 }
 
 .contact-item {
