@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeScrollEffects();
     initializeSmoothScroll();
     initializeTabEnhancements();
+    updateCurrentYear();
+    initializeArrowBounce();
 });
 
 // ============================================
@@ -194,6 +196,27 @@ document.addEventListener('keydown', function(e) {
         }
     }
 });
+
+// ============================================
+// Auto-update current year in footer
+// ============================================
+function updateCurrentYear() {
+    const yearElement = document.getElementById('current-year');
+    if (yearElement) {
+        yearElement.textContent = new Date().getFullYear();
+    }
+}
+
+// ============================================
+// Restore bounce animation for scroll-down arrow
+// ============================================
+function initializeArrowBounce() {
+    const arrow = document.getElementById('bottm-center');
+    if (arrow) {
+        // Completely remove any inline transform that might interfere with CSS animation
+        delete arrow.style.transform;
+    }
+}
 
 // ============================================
 // Console Easter Egg - Portfolio Developer Message

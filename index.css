@@ -109,7 +109,7 @@ body {
 /* Accessibility - Skip link */
 .skip-link {
     position: absolute;
-    top: -40px;
+    top: 0;
     left: 0;
     background: var(--primary-color);
     color: white;
@@ -120,7 +120,12 @@ body {
 }
 
 .skip-link:focus {
-    top: 0;
+    outline: none;
+    box-shadow: 0 2px 8px rgba(37, 99, 235, 0.6);
+}
+
+.skip-link:hover {
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.4);
 }
 
 /* Typography improvements */
@@ -322,20 +327,34 @@ a[target="_blank"]::after {
     position: relative;
     bottom: auto;
     left: auto;
-    transform: none;
     color: #ffffff;
     font-size: clamp(3vmax, 5vmax, 6vmax);
     cursor: pointer;
     text-shadow: 0 4px 20px rgba(255, 255, 255, 0.3);
-    transition: transform var(--transition-normal), text-shadow var(--transition-normal);
-    animation: bounce 2s infinite;
     z-index: 10;
     margin-top: 2rem;
+    animation-name: bounce-arrow !important;
+    animation-duration: 2s !important;
+    animation-timing-function: ease-in-out !important;
+    animation-iteration-count: infinite !important;
+    animation-direction: alternate !important;
+    animation-play-state: running !important;
+    -webkit-animation-name: bounce-arrow !important;
+    -webkit-animation-duration: 2s !important;
+    -webkit-animation-timing-function: ease-in-out !important;
+    -webkit-animation-iteration-count: infinite !important;
+    -webkit-animation-direction: alternate !important;
+    -webkit-animation-play-state: running !important;
+    transform: none !important;
 }
 
 #bottm-center:hover {
-    transform: scale(1.2);
-    text-shadow: 0 4px 30px rgba(255, 255, 255, 0.5);
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+
+#bottm-center:hover i {
+    transform: scale(1.2) !important;
 }
 
 /* ============================================
@@ -1130,6 +1149,15 @@ footer p {
     }
     60% {
         transform: translateY(-7px) translateX(-50%);
+    }
+}
+
+@keyframes bounce-arrow {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
     }
 }
 
