@@ -11,8 +11,19 @@
     <meta property="og:title" content="Qingbo Jiang - Senior Software Engineer">
     <meta property="og:description" content="Senior Software Engineer with expertise in full-stack development, mobile applications, and cloud technologies.">
     <meta property="og:type" content="website">
+    <meta property="og:url" content="https://qingbo93.github.io/">
+    <meta property="og:image" content="https://qingbo93.github.io/assets/images/myprofilepicture2.jpg">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Qingbo Jiang - Senior Software Engineer">
+    <meta name="twitter:description" content="Senior Software Engineer with expertise in full-stack development, mobile applications, and cloud technologies.">
+    <meta name="twitter:image" content="https://qingbo93.github.io/assets/images/myprofilepicture2.jpg">
     
     <title>Qingbo Jiang | Senior Software Engineer</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💻</text></svg>">
     
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,10 +36,12 @@
     <!-- Bootstrap 5 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     
+    <!-- Preload hero background for faster LCP -->
+    <link rel="preload" as="image" href="assets/images/CNTowerEdgeWalk.jpg" fetchpriority="high">
+    
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="index.css">
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="index.js"></script>
 </head>
@@ -39,7 +52,7 @@
     <nav class="navbar navbar-expand-lg navbar-dark navbar-fixed-top navbar-opacity" id="aNavbar" role="navigation" aria-label="Main navigation">
         <div class="container">
             <a class="navbar-brand" href="#myPage" aria-label="Home">
-                <i class="fas fa-code"></i> <span class="d-none d-lg-inline">Qingbo Jiang</span>
+                <i class="fas fa-code" aria-hidden="true"></i> <span class="d-none d-lg-inline">Qingbo Jiang</span>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#myNavbar" aria-controls="myNavbar" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -48,32 +61,32 @@
                 <ul class="nav navbar-nav ms-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="#about" aria-label="About section">
-                            <i class="fas fa-user"></i> <span class="d-none d-lg-inline">About</span>
+                            <i class="fas fa-user" aria-hidden="true"></i> <span class="d-none d-lg-inline">About</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#skills" aria-label="Skills section">
-                            <i class="fas fa-laptop-code"></i> <span class="d-none d-lg-inline">Skills</span>
+                            <i class="fas fa-laptop-code" aria-hidden="true"></i> <span class="d-none d-lg-inline">Skills</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#experience" aria-label="Experience section">
-                            <i class="fas fa-briefcase"></i> <span class="d-none d-lg-inline">Experience</span>
+                            <i class="fas fa-briefcase" aria-hidden="true"></i> <span class="d-none d-lg-inline">Experience</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#portfolio" aria-label="Portfolio section">
-                            <i class="fas fa-th"></i> <span class="d-none d-lg-inline">Portfolio</span>
+                            <i class="fas fa-th" aria-hidden="true"></i> <span class="d-none d-lg-inline">Portfolio</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#resume" aria-label="Resume section">
-                            <i class="fas fa-file-alt"></i> <span class="d-none d-lg-inline">Resume</span>
+                            <i class="fas fa-file-alt" aria-hidden="true"></i> <span class="d-none d-lg-inline">Resume</span>
                         </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#contact" aria-label="Contact section">
-                            <i class="fas fa-envelope"></i> <span class="d-none d-lg-inline">Contact</span>
+                            <i class="fas fa-envelope" aria-hidden="true"></i> <span class="d-none d-lg-inline">Contact</span>
                         </a>
                     </li>
                 </ul>
@@ -84,19 +97,19 @@
     <!-- Hero Section (CN Tower) -->
     <div class="background-cntower" role="banner">
         <div class="hero-content">
-            <h2 class="display-1 fw-bold">Qingbo Jiang</h2>
+            <h1 class="display-1 fw-bold">Qingbo Jiang</h1>
             <h4 class="lead">Senior Software Engineer</h4>
             <p class="hero-quote">No dream is too big. No challenge is too great.</p>
             <div class="hero-actions">
                 <a href="#portfolio" class="btn btn-primary btn-lg me-3" aria-label="View portfolio">
-                    <i class="fas fa-folder-open"></i> View My Work
+                    <i class="fas fa-folder-open" aria-hidden="true"></i> View My Work
                 </a>
                 <a href="#contact" class="btn btn-outline-light btn-lg" aria-label="Contact me">
-                    <i class="fas fa-envelope"></i> Get In Touch
+                    <i class="fas fa-envelope" aria-hidden="true"></i> Get In Touch
                 </a>
             </div>
             <a id="bottm-center" href="#about" aria-label="Scroll to about section">
-                <i class="fa-solid fa-chevron-down"></i>
+                <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
             </a>
         </div>
     </div>
@@ -110,9 +123,9 @@
             <div class="row align-items-center">
                 <div class="col-lg-5 order-lg-2">
                     <div class="profile-image-wrapper">
-                        <img class="img-fluid rounded-xl w3-image" src="assets/images/myprofilepicture2.jpg" alt="Qingbo Jiang - Senior Software Engineer">
+                        <img class="img-fluid rounded-xl w3-image" src="assets/images/myprofilepicture2.jpg" alt="Qingbo Jiang - Senior Software Engineer" loading="lazy">
                         <div class="profile-badge">
-                            <i class="fas fa-code"></i>
+                            <i class="fas fa-code" aria-hidden="true"></i>
                         </div>
                     </div>
                 </div>
@@ -120,17 +133,17 @@
                     <h3 id="about-heading">About Me</h3>
                     <p class="lead">A passionate software developer with extensive industry experience building complex mobile and web applications.</p>
                     <ul class="about-list">
-                        <li><i class="fas fa-check-circle"></i> Full-stack developer with expertise across entire software development lifecycle</li>
-                        <li><i class="fas fa-check-circle"></i> 3D printing enthusiast creating innovative projects with Arduino</li>
-                        <li><i class="fas fa-check-circle"></i> Travel enthusiast and culture explorer</li>
-                        <li><i class="fas fa-check-circle"></i> Competitive gamer passionate about strategy and teamwork</li>
-                        <li><i class="fas fa-check-circle"></i> Swiss watch collector with appreciation for precision engineering</li>
-                        <li><i class="fas fa-check-circle"></i> Anime and manga enthusiast, appreciating Japanese culture</li>
-                        <li><i class="fas fa-check-circle"></i> Aspiring entrepreneur and lifelong learner</li>
-                        <li><i class="fas fa-check-circle"></i> Committed to continuous self-improvement and growth</li>
-                        <li><i class="fas fa-check-circle"></i> Tesla owner and technology enthusiast</li>
-                        <li><i class="fas fa-check-circle"></i> Dedicated to making a positive impact on the world</li>
-                        <li><i class="fas fa-check-circle"></i> AI enthusiast and love tinkering with local models on different projects</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Full-stack developer with expertise across entire software development lifecycle</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> 3D printing enthusiast creating innovative projects with Arduino</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Travel enthusiast and culture explorer</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Competitive gamer passionate about strategy and teamwork</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Swiss watch collector with appreciation for precision engineering</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Anime and manga enthusiast, appreciating Japanese culture</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Aspiring entrepreneur and lifelong learner</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Committed to continuous self-improvement and growth</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Tesla owner and technology enthusiast</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> Dedicated to making a positive impact on the world</li>
+                        <li><i class="fas fa-check-circle" aria-hidden="true"></i> AI enthusiast and love tinkering with local models on different projects</li>
                     </ul>
                 </div>
             </div>
@@ -138,7 +151,7 @@
     </div>
 
     <!-- Skills Section -->
-    <div id="skills" class="section section-dark">
+    <div id="skills" class="section">
         <div class="container">
             <h3 class="section-title text-center">Technical Skills</h3>
             <p class="section-subtitle text-center">A comprehensive overview of my technical expertise and technologies I work with daily.</p>
@@ -147,7 +160,7 @@
                 <!-- Frontend -->
                 <div class="skill-category">
                     <div class="skill-header">
-                        <i class="fas fa-desktop"></i>
+                        <i class="fas fa-desktop" aria-hidden="true"></i>
                         <h4>Frontend Development</h4>
                     </div>
                     <div class="skill-items">
@@ -163,7 +176,7 @@
                 <!-- Backend -->
                 <div class="skill-category">
                     <div class="skill-header">
-                        <i class="fas fa-server"></i>
+                        <i class="fas fa-server" aria-hidden="true"></i>
                         <h4>Backend Development</h4>
                     </div>
                     <div class="skill-items">
@@ -179,7 +192,7 @@
                 <!-- Mobile -->
                 <div class="skill-category">
                     <div class="skill-header">
-                        <i class="fas fa-mobile-alt"></i>
+                        <i class="fas fa-mobile-alt" aria-hidden="true"></i>
                         <h4>Mobile Development</h4>
                     </div>
                     <div class="skill-items">
@@ -195,7 +208,7 @@
                 <!-- DevOps & Cloud -->
                 <div class="skill-category">
                     <div class="skill-header">
-                        <i class="fas fa-cloud"></i>
+                        <i class="fas fa-cloud" aria-hidden="true"></i>
                         <h4>DevOps & Cloud</h4>
                     </div>
                     <div class="skill-items">
@@ -211,7 +224,7 @@
                 <!-- Tools & Technologies -->
                 <div class="skill-category">
                     <div class="skill-header">
-                        <i class="fas fa-tools"></i>
+                        <i class="fas fa-tools" aria-hidden="true"></i>
                         <h4>Tools & Technologies</h4>
                     </div>
                     <div class="skill-items">
@@ -227,7 +240,7 @@
                 <!-- Architecture & Design -->
                 <div class="skill-category">
                     <div class="skill-header">
-                        <i class="fas fa-project-diagram"></i>
+                        <i class="fas fa-project-diagram" aria-hidden="true"></i>
                         <h4>Architecture & Design</h4>
                     </div>
                     <div class="skill-items">
@@ -254,14 +267,14 @@
             <div class="experience-card">
                 <div class="experience-header">
                     <div class="company-logo">
-                        <img src="assets/images/dropbox_icon.svg" alt="Dropbox Logo">
+                        <img src="assets/images/dropbox_icon.svg" alt="Dropbox Logo" loading="lazy">
                     </div>
                     <div class="experience-info">
                         <h3 class="company-name">
-                            <a target="_blank" href="https://dropbox.com/" aria-label="Visit Dropbox website">Dropbox</a>
+                            <a target="_blank" rel="noopener noreferrer" href="https://dropbox.com/" aria-label="Visit Dropbox website">Dropbox</a>
                         </h3>
                         <p class="job-title">Senior Software Engineer</p>
-                        <p class="date"><i class="far fa-calendar-alt"></i> October 2022 - Present</p>
+                        <p class="date"><i class="far fa-calendar-alt" aria-hidden="true"></i> October 2022 - Present</p>
                     </div>
                 </div>
                 <ul class="achievements-list">
@@ -275,14 +288,14 @@
             <div class="experience-card">
                 <div class="experience-header">
                     <div class="company-logo">
-                        <img src="assets/images/aws-logo.jpg" alt="Amazon Web Services Logo">
+                        <img src="assets/images/aws-logo.jpg" alt="Amazon Web Services Logo" loading="lazy">
                     </div>
                     <div class="experience-info">
                         <h3 class="company-name">
-                            <a target="_blank" href="https://amazon.com/" aria-label="Visit Amazon website">Amazon</a>
+                            <a target="_blank" rel="noopener noreferrer" href="https://amazon.com/" aria-label="Visit Amazon website">Amazon</a>
                         </h3>
                         <p class="job-title">Software Development Engineer II</p>
-                        <p class="date"><i class="far fa-calendar-alt"></i> July 2019 - October 2022</p>
+                        <p class="date"><i class="far fa-calendar-alt" aria-hidden="true"></i> July 2019 - October 2022</p>
                     </div>
                 </div>
                 <ul class="achievements-list">
@@ -302,14 +315,14 @@
             <div class="experience-card">
                 <div class="experience-header">
                     <div class="company-logo">
-                        <img src="assets/images/xe-logo.png" alt="XE.com Logo">
+                        <img src="assets/images/xe-logo.png" alt="XE.com Logo" loading="lazy">
                     </div>
                     <div class="experience-info">
                         <h3 class="company-name">
-                            <a target="_blank" href="http://www.xe.com" aria-label="Visit XE.com website">XE.com</a>
+                            <a target="_blank" rel="noopener noreferrer" href="http://www.xe.com" aria-label="Visit XE.com website">XE.com</a>
                         </h3>
                         <p class="job-title">Software Developer (Full Stack)</p>
-                        <p class="date"><i class="far fa-calendar-alt"></i> May 2017 - July 2021</p>
+                        <p class="date"><i class="far fa-calendar-alt" aria-hidden="true"></i> May 2017 - July 2021</p>
                     </div>
                 </div>
                 <ul class="achievements-list">
@@ -331,14 +344,14 @@
             <div class="experience-card">
                 <div class="experience-header">
                     <div class="company-logo">
-                        <img src="assets/images/xe-logo.png" alt="XE.com Logo">
+                        <img src="assets/images/xe-logo.png" alt="XE.com Logo" loading="lazy">
                     </div>
                     <div class="experience-info">
                         <h3 class="company-name">
-                            <a target="_blank" href="http://www.xe.com" aria-label="Visit XE.com website">XE.com (Android Team)</a>
+                            <a target="_blank" rel="noopener noreferrer" href="http://www.xe.com" aria-label="Visit XE.com website">XE.com (Android Team)</a>
                         </h3>
                         <p class="job-title">Software Developer (Android)</p>
-                        <p class="date"><i class="far fa-calendar-alt"></i> May 2017 - April 2019</p>
+                        <p class="date"><i class="far fa-calendar-alt" aria-hidden="true"></i> May 2017 - April 2019</p>
                     </div>
                 </div>
                 <ul class="achievements-list">
@@ -354,14 +367,14 @@
             <div class="experience-card">
                 <div class="experience-header">
                     <div class="company-logo">
-                        <img src="assets/images/Pzizz_Logo.png" alt="Pzizz Logo">
+                        <img src="assets/images/Pzizz_Logo.png" alt="Pzizz Logo" loading="lazy">
                     </div>
                     <div class="experience-info">
                         <h3 class="company-name">
-                            <a target="_blank" href="http://www.serindlabs.com" aria-label="Visit Serind Labs website">Serind Labs</a>
+                            <a target="_blank" rel="noopener noreferrer" href="http://www.serindlabs.com" aria-label="Visit Serind Labs website">Serind Labs</a>
                         </h3>
                         <p class="job-title">Android Developer</p>
-                        <p class="date"><i class="far fa-calendar-alt"></i> Jan 2017 - May 2017</p>
+                        <p class="date"><i class="far fa-calendar-alt" aria-hidden="true"></i> Jan 2017 - May 2017</p>
                     </div>
                 </div>
                 <ul class="achievements-list">
@@ -383,18 +396,18 @@
             <!-- Portfolio Tabs -->
             <ul class="nav nav-tabs mb-4" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#personal" type="button" role="tab" aria-controls="personal" aria-selected="false">
-                        <i class="fas fa-user"></i> Personal Projects
+                    <button class="nav-link" id="personal-tab" data-bs-toggle="tab" data-bs-target="#personal" type="button" role="tab" aria-controls="personal" aria-selected="false">
+                        <i class="fas fa-user" aria-hidden="true"></i> Personal Projects
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#work" type="button" role="tab" aria-controls="work" aria-selected="true">
-                        <i class="fas fa-briefcase"></i> Professional Work
+                    <button class="nav-link active" id="work-tab" data-bs-toggle="tab" data-bs-target="#work" type="button" role="tab" aria-controls="work" aria-selected="true">
+                        <i class="fas fa-briefcase" aria-hidden="true"></i> Professional Work
                     </button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#academic" type="button" role="tab" aria-controls="academic" aria-selected="false">
-                        <i class="fas fa-graduation-cap"></i> Academic Projects
+                    <button class="nav-link" id="academic-tab" data-bs-toggle="tab" data-bs-target="#academic" type="button" role="tab" aria-controls="academic" aria-selected="false">
+                        <i class="fas fa-graduation-cap" aria-hidden="true"></i> Academic Projects
                     </button>
                 </li>
             </ul>
@@ -406,7 +419,7 @@
                         <div class="col-lg-10 mx-auto">
                             <div class="portfolio-card">
                                 <div class="portfolio-header">
-                                    <h3><img src="assets/images/advancetipsplitshare_logo.png" style="width:50px;height:50px;"> Advance Tip Split Share</h3>
+                                    <h3><img src="assets/images/advancetipsplitshare_logo.png" style="width:50px;height:50px;" alt="Advance Tip Split Share logo" loading="lazy"> Advance Tip Split Share</h3>
                                 </div>
                                 <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" aria-label="Advance Tip Split Share screenshots">
                                     <ol class="carousel-indicators">
@@ -417,16 +430,16 @@
                                     </ol>
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot.jpg" alt="Advance Tip Split Share - Main Interface">
+                                            <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot.jpg" alt="Advance Tip Split Share - Main Interface" loading="lazy">
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot2.jpg" alt="Advance Tip Split Share - Buffet Mode">
+                                            <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot2.jpg" alt="Advance Tip Split Share - Buffet Mode" loading="lazy">
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot3.jpg" alt="Advance Tip Split Share - Custom Bill Mode">
+                                            <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot3.jpg" alt="Advance Tip Split Share - Custom Bill Mode" loading="lazy">
                                         </div>
                                         <div class="carousel-item">
-                                            <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot4.jpg" alt="Advance Tip Split Share - Send Bill Feature">
+                                            <img class="img-fluid" src="assets/images/advancetipsplitshare_screenshot4.jpg" alt="Advance Tip Split Share - Send Bill Feature" loading="lazy">
                                         </div>
                                     </div>
                                     <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev" aria-label="Previous slide">
@@ -438,8 +451,8 @@
                                 </div>
                                 <div class="portfolio-body">
                                     <p>The world's most advanced bill splitting app. It contains three different modes: even split, buffet mode and custom bill. It has an option calculate tip before tax. Sending bill has never been easier with the send bill button, sending the complete calculation of any bill to your friends via SMS or any social media platform, making dining simple and great again.</p>
-                                    <a target="_blank" href="http://www.goo.gl/czghyy" class="btn btn-primary mt-3">
-                                        <i class="fas fa-external-link-alt"></i> View App
+                                    <a target="_blank" rel="noopener noreferrer" href="http://www.goo.gl/czghyy" class="btn btn-primary mt-3">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> View App
                                     </a>
                                 </div>
                             </div>
@@ -453,131 +466,131 @@
                     <div class="row g-4">
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="portfolio-card">
-                                <img src="assets/images/dropbox_icon.svg" alt="Dropbox" class="portfolio-logo">
+                                <img src="assets/images/dropbox_icon.svg" alt="Dropbox" class="portfolio-logo" loading="lazy">
                                 <h3>Dropbox</h3>
                                 <p>Dropbox is a cloud storage service that lets you save files online and sync them to your devices.</p>
-                                <a target="_blank" href="https://dropbox.com/" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-external-link-alt"></i> Visit Site
+                                <a target="_blank" rel="noopener noreferrer" href="https://dropbox.com/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Visit Site
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="portfolio-card">
-                                <img src="assets/images/aws-logo.jpg" alt="Amazon Web Services" class="portfolio-logo">
+                                <img src="assets/images/aws-logo.jpg" alt="Amazon Web Services" class="portfolio-logo" loading="lazy">
                                 <h3>Amazon Web Services</h3>
                                 <p>Tier 1 service - Simple Workflow. This service is used by millions of customers including many other AWS services.</p>
-                                <a target="_blank" href="https://aws.amazon.com/swf/" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-external-link-alt"></i> Visit Site
+                                <a target="_blank" rel="noopener noreferrer" href="https://aws.amazon.com/swf/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Visit Site
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="portfolio-card">
-                                <img src="assets/images/amazon-ads.png" alt="Amazon Advertising" class="portfolio-logo">
+                                <img src="assets/images/amazon-ads.png" alt="Amazon Advertising" class="portfolio-logo" loading="lazy">
                                 <h3>Amazon Advertising</h3>
                                 <p>Built many internal tools and services to help Data Engineers tackle big data related problems.</p>
-                                <a target="_blank" href="https://advertising.amazon.com/" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-external-link-alt"></i> Visit Site
+                                <a target="_blank" rel="noopener noreferrer" href="https://advertising.amazon.com/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Visit Site
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="portfolio-card">
-                                <img src="assets/images/xe-apollo.webp" alt="Login API" class="portfolio-logo">
+                                <img src="assets/images/xe-apollo.webp" alt="Login API" class="portfolio-logo" loading="lazy">
                                 <h3>Login API</h3>
                                 <p>Single Sign On API used by various XE products to allow frictionless login between different products powered by AWS Cognito.</p>
-                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.xe.currency&hl=en_CA&gl=US" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-external-link-alt"></i> View App
+                                <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.xe.currency&hl=en_CA&gl=US" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> View App
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="portfolio-card">
-                                <img src="assets/images/xecd.png" alt="XE Currency Data" class="portfolio-logo">
+                                <img src="assets/images/xecd.png" alt="XE Currency Data" class="portfolio-logo" loading="lazy">
                                 <h3>XE Currency Data</h3>
                                 <p>Industry leading currency converter API & exchange rate API from XE. Integrate data easily with JSON, CSV, or XML formats.</p>
-                                <a target="_blank" href="https://www.xe.com/xecurrencydata/" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-external-link-alt"></i> Visit Site
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.xe.com/xecurrencydata/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Visit Site
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="portfolio-card">
-                                <img src="assets/images/xe-logo2.png" alt="XE Single Sign On" class="portfolio-logo">
+                                <img src="assets/images/xe-logo2.png" alt="XE Single Sign On" class="portfolio-logo" loading="lazy">
                                 <h3>XE Single Sign On</h3>
                                 <p>Accounts.xe.com leverages on Login API. Frontend is developed with React and backend is developed using Node.js</p>
-                                <a target="_blank" href="https://accounts.xe.com/login?client_id=7v3mjop0iq74d7bdpgvn95r86d&redirect_uri=https%3A%2F%2Ftransfer.xe.com%2Faccount%2Flogin%2Fhome&response_type=code&state=" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-external-link-alt"></i> Visit Site
+                                <a target="_blank" rel="noopener noreferrer" href="https://accounts.xe.com/login?client_id=7v3mjop0iq74d7bdpgvn95r86d&redirect_uri=https%3A%2F%2Ftransfer.xe.com%2Faccount%2Flogin%2Fhome&response_type=code&state=" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Visit Site
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="portfolio-card">
-                                <img src="assets/images/ratealerts.png" alt="XE Rate Alerts" class="portfolio-logo">
+                                <img src="assets/images/ratealerts.png" alt="XE Rate Alerts" class="portfolio-logo" loading="lazy">
                                 <h3>XE Rate Alerts</h3>
                                 <p>XERA watches the market for you. Set an alert so you never miss your desired rate.</p>
-                                <a target="_blank" href="https://www.xe.com/ratealerts/" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-external-link-alt"></i> Visit Site
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.xe.com/ratealerts/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Visit Site
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="portfolio-card">
-                                <img src="assets/images/xe-logo.png" alt="XE Currency App" class="portfolio-logo">
+                                <img src="assets/images/xe-logo.png" alt="XE Currency App" class="portfolio-logo" loading="lazy">
                                 <h3>XE Currency App (Redesign)</h3>
                                 <p>XE Currency is your go to currency app for international money transfers, travel, shopping, and personal use.</p>
-                                <a target="_blank" href="https://www.apkmirror.com/apk/xe-com-inc/xe-currency/xe-currency-6-5-6-release/" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-external-link-alt"></i> Download
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.apkmirror.com/apk/xe-com-inc/xe-currency/xe-currency-6-5-6-release/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Download
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="portfolio-card">
-                                <img src="assets/images/com.xe.moneytransfer-w130.webp" alt="XE Money Transfer App" class="portfolio-logo">
+                                <img src="assets/images/com.xe.moneytransfer-w130.webp" alt="XE Money Transfer App" class="portfolio-logo" loading="lazy">
                                 <h3>XE Money Transfer App</h3>
                                 <p>XE Money Transfer is the quick, easy, and secure way to transfer money around the globe.</p>
-                                <a target="_blank" href="https://apkcombo.com/xe-money-transfer/com.xe.moneytransfer/" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-external-link-alt"></i> Download
+                                <a target="_blank" rel="noopener noreferrer" href="https://apkcombo.com/xe-money-transfer/com.xe.moneytransfer/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Download
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="portfolio-card">
-                                <img src="assets/images/xe-travel.png" alt="XE Travel App" class="portfolio-logo">
+                                <img src="assets/images/xe-travel.png" alt="XE Travel App" class="portfolio-logo" loading="lazy">
                                 <h3>XE Travel App</h3>
                                 <p>XE, The World's Trusted Currency Authority, has just created an app specifically for travelers who want to budget and record their trip expenses.</p>
-                                <a target="_blank" href="https://m.apkpure.com/xe-travel/com.xe.travel" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-external-link-alt"></i> Download
+                                <a target="_blank" rel="noopener noreferrer" href="https://m.apkpure.com/xe-travel/com.xe.travel" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Download
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="portfolio-card">
-                                <img src="assets/images/og_xe_app.png" alt="XE Currency App Original" class="portfolio-logo">
+                                <img src="assets/images/og_xe_app.png" alt="XE Currency App Original" class="portfolio-logo" loading="lazy">
                                 <h3>XE Currency App (Original)</h3>
                                 <p>Since 2009, XE Currency been connecting the world through currency exchange by providing reliable exchange rates and charts for free.</p>
-                                <a target="_blank" href="https://www.apkmirror.com/apk/xe-com-inc/xe-currency/xe-currency-5-1-0-release/" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-external-link-alt"></i> Download
+                                <a target="_blank" rel="noopener noreferrer" href="https://www.apkmirror.com/apk/xe-com-inc/xe-currency/xe-currency-5-1-0-release/" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Download
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="portfolio-card">
-                                <img src="assets/images/Pzizz_Logo.png" alt="Pzizz App" class="portfolio-logo">
+                                <img src="assets/images/Pzizz_Logo.png" alt="Pzizz App" class="portfolio-logo" loading="lazy">
                                 <h3>Pzizz App</h3>
                                 <p>Pzizz delivers sleep at the push of a button! Using the science of psychoacoustics, the app's patented algorithm plays you a sleep-optimized mix of music, voiceover, and sound effects to quickly quiet your mind, put you to sleep, keep you asleep, and then wake you up feeling refreshed.</p>
-                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.pzizz.android" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-external-link-alt"></i> Download
+                                <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.pzizz.android" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Download
                                 </a>
                             </div>
                         </div>
                         <div class="col-lg-3 col-md-4 col-sm-6">
                             <div class="portfolio-card">
-                                <img src="assets/images/WRKS_Logo.png" alt="WRKS" class="portfolio-logo">
+                                <img src="assets/images/WRKS_Logo.png" alt="WRKS" class="portfolio-logo" loading="lazy">
                                 <h3>WRKS</h3>
                                 <p>WRKS matches eager and capable internship/apprenticeship job seekers with nearby employers in the construction and development world.</p>
-                                <a target="_blank" href="https://play.google.com/store/apps/details?id=com.wrks.wrks" class="btn btn-sm btn-outline-primary">
-                                    <i class="fas fa-external-link-alt"></i> Download
+                                <a target="_blank" rel="noopener noreferrer" href="https://play.google.com/store/apps/details?id=com.wrks.wrks" class="btn btn-sm btn-outline-primary">
+                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> Download
                                 </a>
                             </div>
                         </div>
@@ -592,20 +605,20 @@
                             <div class="col-lg-4 col-md-6">
                                 <div class="portfolio-card">
                                     <h3>Library Watchdog</h3>
-                                    <img class="img-fluid" src="assets/images/robotics.jpg" alt="Library Watchdog Robot">
+                                    <img class="img-fluid" src="assets/images/robotics.jpg" alt="Library Watchdog Robot" loading="lazy">
                                     <p>The library watchdog was created to keep the library quiet. It will constantly scan the surrounding area for the loudest noise and move towards it. Once it finds the noise source, it will tell the noisemaker to quiet down. It is equipped with the latest technology which allows it to avoid falling off platforms, and avoid obstacles. This has many other utilizations such being used as a scout to find trapped survivors during an earthquake.</p>
                                     <button class="btn btn-primary mt-3" onclick="onVideoClick('assets/videos/Final Robotics Project.webm');">
-                                        <i class="fas fa-play-circle"></i> Watch Demo
+                                        <i class="fas fa-play-circle" aria-hidden="true"></i> Watch Demo
                                     </button>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-6">
                                 <div class="portfolio-card">
                                     <h3>Online Chat</h3>
-                                    <img class="img-fluid" src="assets/images/babbletext.jpg" alt="BabbleT Chat Application">
+                                    <img class="img-fluid" src="assets/images/babbletext.jpg" alt="BabbleT Chat Application" loading="lazy">
                                     <p>BabbleT is a free web application that allows you to chat in real time with new instantly people every day from anywhere. BabbleT finds people with similar interests by letting you search or enter the topic you want to talk about. Users can also customize their profiles and display pictures to their own liking.</p>
-                                    <a target="_blank" href="http://babbletxt.com/" class="btn btn-primary mt-3">
-                                        <i class="fas fa-external-link-alt"></i> Visit Site
+                                    <a target="_blank" rel="noopener noreferrer" href="http://babbletxt.com/" class="btn btn-primary mt-3">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i> Visit Site
                                     </a>
                                 </div>
                             </div>
@@ -620,30 +633,30 @@
                                         <div class="carousel-item active">
                                             <div class="portfolio-card">
                                                 <h3>Weather App</h3>
-                                                <img class="img-fluid" src="assets/images/weatherapp.jpg" alt="Weather App Interface">
+                                                <img class="img-fluid" src="assets/images/weatherapp.jpg" alt="Weather App Interface" loading="lazy">
                                                 <p>This weather app allows you to check weather in cities from all over the world! Just enter the city name and watch it fetch all the data. Data is parsed from openweathermap.org in JSON format. Comes with 7 days long term forcast and 3-hours shorterm forcast.</p>
-                                                <a target="_blank" href="weather.html" class="btn btn-primary mt-3">
-                                                    <i class="fas fa-external-link-alt"></i> View App
+                                                <a target="_blank" rel="noopener noreferrer" href="weather.html" class="btn btn-primary mt-3">
+                                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> View App
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="carousel-item">
                                             <div class="portfolio-card">
                                                 <h3>Distance Calculator</h3>
-                                                <img class="img-fluid" src="assets/images/distanceapp.png" alt="Distance Calculator App">
+                                                <img class="img-fluid" src="assets/images/distanceapp.png" alt="Distance Calculator App" loading="lazy">
                                                 <p>Handy tool to get the location by uploading co-ordinates by dragging a textfile to the area and can find your current location as well. Uses reverse geolocation to find the address for each set of lon and lat. This app uses a web worker to calculate the distance between the two points.</p>
-                                                <a target="_blank" href="distance.html" class="btn btn-primary mt-3">
-                                                    <i class="fas fa-external-link-alt"></i> View App
+                                                <a target="_blank" rel="noopener noreferrer" href="distance.html" class="btn btn-primary mt-3">
+                                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> View App
                                                 </a>
                                             </div>
                                         </div>
                                         <div class="carousel-item">
                                             <div class="portfolio-card">
                                                 <h3>Todo List App</h3>
-                                                <img class="img-fluid" src="assets/images/todolistapp.png" alt="Todo List Application">
+                                                <img class="img-fluid" src="assets/images/todolistapp.png" alt="Todo List Application" loading="lazy">
                                                 <p>A very interactive angular todo app. Handy tool keep track and add to your to-do list. It will help you remove duplicates, and has two different lists for moving a task from todo to completed.</p>
-                                                <a target="_blank" href="todolist.html" class="btn btn-primary mt-3">
-                                                    <i class="fas fa-external-link-alt"></i> View App
+                                                <a target="_blank" rel="noopener noreferrer" href="todolist.html" class="btn btn-primary mt-3">
+                                                    <i class="fas fa-external-link-alt" aria-hidden="true"></i> View App
                                                 </a>
                                             </div>
                                         </div>
@@ -669,10 +682,10 @@
             <h3 id="resume-heading">Resume</h3>
             <p class="lead">Download my complete resume to learn more about my experience and qualifications.</p>
             <br>
-            <a target="_blank" href="https://docs.google.com/document/d/1YEpTCoLIH8IyhYz6D9FfWmECBxWyK_jBxTJONjo5Q7k/edit?usp=sharing" class="resume-link" aria-label="Download resume">
-                <img class="img-fluid rounded-xl" src="assets/images/resume-templates.png" alt="Resume Preview">
+            <a target="_blank" rel="noopener noreferrer" href="https://docs.google.com/document/d/1YEpTCoLIH8IyhYz6D9FfWmECBxWyK_jBxTJONjo5Q7k/edit?usp=sharing" class="resume-link" aria-label="Download resume">
+                <img class="img-fluid rounded-xl" src="assets/images/resume-templates.png" alt="Resume Preview" loading="lazy">
                 <br><br>
-                <p class="mb-0"><i class="fas fa-download"></i> Click to view my full resume</p>
+                <p class="mb-0"><i class="fas fa-download" aria-hidden="true"></i> Click to view my full resume</p>
             </a>
         </div>
     </div>
@@ -686,20 +699,20 @@
             <div id="contact-info" class="mt-4">
                 <div class="contact-methods">
                     <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                         <span>Greater Toronto Area, Ontario, Canada</span>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a target="_blank" href="mailto:qingbojiang@gmail.com">qingbojiang@gmail.com</a>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <a target="_blank" rel="noopener noreferrer" href="mailto:qingbojiang@gmail.com">qingbojiang@gmail.com</a>
                     </div>
                     <div class="contact-item">
-                        <i class="fas fa-globe"></i>
-                        <a target="_blank" href="https://github.com/qingbo93">GitHub</a>
+                        <i class="fas fa-globe" aria-hidden="true"></i>
+                        <a target="_blank" rel="noopener noreferrer" href="https://github.com/qingbo93">GitHub</a>
                     </div>
                     <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
-                        <a target="_blank" href="https://ca.linkedin.com/in/qingbojiang">LinkedIn</a>
+                        <i class="fab fa-linkedin" aria-hidden="true"></i>
+                        <a target="_blank" rel="noopener noreferrer" href="https://ca.linkedin.com/in/qingbojiang">LinkedIn</a>
                     </div>
                 </div>
             </div>
@@ -715,12 +728,17 @@
     <footer role="contentinfo">
         <div class="panel-footer">
             <div class="social-links">
-                <a target="_blank" href="https://github.com/qingbo93" title="Follow me on GitHub" aria-label="GitHub profile">
-                    <i class="fab fa-github"></i>
+                <a target="_blank" rel="noopener noreferrer" href="https://github.com/qingbo93" title="Follow me on GitHub" aria-label="GitHub profile">
+                    <i class="fab fa-github" aria-hidden="true"></i>
                 </a>
-                <a target="_blank" href="https://ca.linkedin.com/in/qingbojiang" title="Connect with me on LinkedIn" aria-label="LinkedIn profile">
-                    <i class="fab fa-linkedin"></i>
+                <a target="_blank" rel="noopener noreferrer" href="https://ca.linkedin.com/in/qingbojiang" title="Connect with me on LinkedIn" aria-label="LinkedIn profile">
+                    <i class="fab fa-linkedin" aria-hidden="true"></i>
                 </a>
+            </div>
+            <div class="legal-links">
+                <a href="privacy/privacy_policy.html">Privacy Policy</a>
+                <span aria-hidden="true">•</span>
+                <a href="privacy/terms_and_conditions.html">Terms & Conditions</a>
             </div>
             <p>Created and Designed by Qingbo Jiang<br> &#9400; 2016-<span id="current-year"></span></p>
         </div>

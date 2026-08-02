@@ -164,10 +164,17 @@ a:hover {
     text-decoration: underline;
 }
 
-a[target="_blank"]::after {
+/* External link indicator - only for text links, not icon-only links */
+a[target="_blank"]:not(.icon-only):not(.contact-item a):not(.social-links a)::after {
     content: ' ↗';
     font-size: 0.7em;
     opacity: 0.6;
+}
+
+/* Prevent arrow on footer social icon links and contact icon links */
+.social-links a::after,
+.contact-item a::after {
+    content: none !important;
 }
 
 /* ============================================
@@ -254,7 +261,7 @@ a[target="_blank"]::after {
     padding: 0 1rem;
 }
 
-.background-cntower h2 {
+.background-cntower h1 {
     font-family: 'Inter', sans-serif;
     font-weight: 800;
     font-size: clamp(2.5rem, 6vmax, 5rem);
@@ -330,17 +337,26 @@ a[target="_blank"]::after {
 }
 
 .section-title {
-    color: #ffffff;
+    color: var(--text-primary);
     font-size: clamp(2rem, 3.5vmax, 3rem);
     margin-bottom: 0.5rem;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
 }
 
 .section-subtitle {
-    color: rgba(255, 255, 255, 0.8);
+    color: var(--text-secondary);
     font-size: 1.1rem;
     max-width: 600px;
     margin: 0 auto 3rem;
+}
+
+/* Dark sections keep light titles */
+.section-dark .section-title {
+    color: #ffffff;
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.2);
+}
+
+.section-dark .section-subtitle {
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* ============================================
@@ -1097,6 +1113,28 @@ footer p {
     margin-top: 1rem;
 }
 
+footer .legal-links {
+    margin-top: 1rem;
+    font-size: 0.85rem;
+}
+
+footer .legal-links a {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 0.85rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+footer .legal-links a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+footer .legal-links span {
+    color: rgba(255, 255, 255, 0.3);
+}
+
 /* ============================================
    ANIMATIONS
    ============================================ */
@@ -1190,6 +1228,40 @@ footer p {
     .hero-actions .btn {
         width: 100%;
         text-align: center;
+    }
+    
+    /* Disable fixed background on mobile for performance */
+    .background-cntower {
+        background-attachment: scroll;
+    }
+}
+
+/* ============================================
+   DARK MODE BORDER & CARD FIXES
+   ============================================ */
+@media (prefers-color-scheme: dark) {
+    .skill-header,
+    .experience-header {
+        border-bottom-color: rgba(255, 255, 255, 0.1);
+    }
+    
+    .portfolio-card .btn-outline-primary {
+        color: var(--primary-light);
+        border-color: var(--primary-light);
+    }
+    
+    .portfolio-card .btn-outline-primary:hover {
+        background: var(--primary-color);
+        color: white;
+    }
+    
+    .company-logo {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .carousel-control-prev-icon,
+    .carousel-control-next-icon {
+        filter: invert(1);
     }
 }
 

@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeTabEnhancements();
     updateCurrentYear();
     initializeArrowBounce();
+    initializeMobileMenu();
+    initializeScrollSpy();
 });
 
 // ============================================
@@ -20,6 +22,13 @@ document.addEventListener('DOMContentLoaded', function() {
 // ============================================
 function initializeAnimations() {
     const fadeElements = document.querySelectorAll('.portfolio-card, .skill-category, .experience-card, .about-list li');
+    
+    // Respect users who prefer reduced motion
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (prefersReducedMotion) {
+        fadeElements.forEach(el => el.classList.add('visible'));
+        return;
+    }
     
     const observerOptions = {
         root: null,
@@ -49,6 +58,7 @@ function initializeScrollEffects() {
     const navbar = document.querySelector('.navbar');
     
     window.addEventListener('scroll', () => {
+        if (!navbar) return;
         if (window.scrollY > 50) {
             navbar.classList.add('solid');
         } else {
@@ -62,6 +72,7 @@ function initializeScrollEffects() {
 // ============================================
 function initializeSmoothScroll() {
     const scrollLinks = document.querySelectorAll('a[href^="#"]');
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     
     scrollLinks.forEach(link => {
         link.addEventListener('click', function(e) {
@@ -81,8 +92,17 @@ function initializeSmoothScroll() {
                 
                 window.scrollTo({
                     top: offsetPosition,
-                    behavior: 'smooth'
+                    behavior: prefersReducedMotion ? 'auto' : 'smooth'
                 });
+
+                // Close mobile menu after clicking a nav link
+                const navbarCollapse = document.getElementById('myNavbar');
+                if (navbarCollapse && navbarCollapse.classList.contains('show')) {
+                    const toggleButton = document.querySelector('.navbar-toggler');
+                    if (toggleButton) {
+                        toggleButton.click();
+                    }
+                }
             }
         });
     });
@@ -115,6 +135,58 @@ function initializeTabEnhancements() {
 }
 
 // ============================================
+// Mobile Menu Enhancement
+// ============================================
+function initializeMobileMenu() {
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    if (!navbarCollapse) return;
+    
+    // Lock body scroll when menu is open, unlock when closed
+    // NOTE: Do NOT use { once: true } — this must work every time
+    navbarCollapse.addEventListener('show.bs.collapse', function() {
+        document.body.style.overflow = 'hidden';
+    });
+    
+    navbarCollapse.addEventListener('hidden.bs.collapse', function() {
+        document.body.style.overflow = '';
+    });
+}
+
+// ============================================
+// Scroll Spy for active nav highlighting
+// ============================================
+function initializeScrollSpy() {
+    const sections = document.querySelectorAll('section[id], div[id]');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    
+    // Only track sections that have nav links
+    const trackedIds = Array.from(navLinks).map(link => link.getAttribute('href').substring(1));
+    const trackedSections = Array.from(sections).filter(section => trackedIds.includes(section.id));
+    
+    if (trackedSections.length === 0) return;
+    
+    const observerOptions = {
+        rootMargin: '-40% 0px -55% 0px',
+        threshold: 0
+    };
+    
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${entry.target.id}`) {
+                        link.classList.add('active');
+                    }
+                });
+            }
+        });
+    }, observerOptions);
+    
+    trackedSections.forEach(section => observer.observe(section));
+}
+
+// ============================================
 // Video Popup Functionality
 // ============================================
 function onVideoClick(videoSrc) {
@@ -134,6 +206,8 @@ function onVideoClick(videoSrc) {
         </video>
     `;
     popup.style.display = 'flex';
+    // Lock body scroll when video is open
+    document.body.style.overflow = 'hidden';
 }
 
 // Close popup when clicking outside video
@@ -147,6 +221,7 @@ if (videoPop) {
             }
             this.innerHTML = '';
             this.style.display = 'none';
+            document.body.style.overflow = '';
         }
     });
 }
@@ -160,24 +235,8 @@ window.onPopClick = function() {
     }
     popup.innerHTML = '';
     popup.style.display = 'none';
+    document.body.style.overflow = '';
 };
-
-// ============================================
-// Mobile Menu Enhancement
-// ============================================
-// Wait for Bootstrap to initialize before adding listeners
-setTimeout(() => {
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    if (navbarCollapse) {
-        navbarCollapse.addEventListener('show.bs.collapse', function() {
-            document.body.style.overflow = 'hidden';
-        }, { once: true });
-        
-        navbarCollapse.addEventListener('hidden.bs.collapse', function() {
-            document.body.style.overflow = '';
-        }, { once: true });
-    }
-}, 100);
 
 // ============================================
 // Add keyboard navigation for accessibility
@@ -193,6 +252,7 @@ document.addEventListener('keydown', function(e) {
             }
             popup.innerHTML = '';
             popup.style.display = 'none';
+            document.body.style.overflow = '';
         }
     }
 });
