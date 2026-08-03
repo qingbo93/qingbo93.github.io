@@ -104,6 +104,53 @@ body {
     line-height: 1.7;
     background-color: var(--bg-primary);
     transition: background-color var(--transition-normal), color var(--transition-normal);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* Custom selection color */
+::selection {
+    background: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, var(--primary-color), var(--accent-color));
+    border-radius: var(--radius-full);
+    border: 3px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-dark);
+}
+
+/* Visible focus rings for keyboard navigation */
+:focus-visible {
+    outline: 3px solid var(--primary-light);
+    outline-offset: 2px;
+    border-radius: 4px;
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
 }
 
 /* Typography improvements */
@@ -181,9 +228,7 @@ a[target="_blank"]:not(.icon-only):not(.contact-item a):not(.social-links a)::af
    NAVIGATION BAR
    ============================================ */
 .navbar {
-    background: rgba(15, 23, 42, 0.9);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    background: rgba(15, 23, 42, 0.92);
     transition: all var(--transition-normal);
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding: 0.75rem 1rem;
@@ -231,7 +276,6 @@ a[target="_blank"]:not(.icon-only):not(.contact-item a):not(.social-links a)::af
     background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.5)), url("assets/images/CNTowerEdgeWalk.jpg");
     background-size: cover;
     background-position: center;
-    background-attachment: fixed;
     min-height: 100vh;
     max-height: 100vh;
     display: flex;
@@ -241,7 +285,7 @@ a[target="_blank"]:not(.icon-only):not(.contact-item a):not(.social-links a)::af
     text-align: center;
     position: relative;
     overflow: hidden;
-    padding-bottom: 300px;
+    padding-bottom: clamp(140px, 16vh, 220px);
 }
 
 .background-cntower::before {
@@ -292,6 +336,47 @@ a[target="_blank"]:not(.icon-only):not(.contact-item a):not(.social-links a)::af
     animation: fadeInUp 1s ease-out 0.4s backwards;
 }
 
+/* Hero availability badge */
+.hero-status {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.375rem 1rem;
+    border-radius: var(--radius-full);
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    color: rgba(255, 255, 255, 0.95);
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    margin-bottom: 1.5rem;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    animation: fadeInUp 1s ease-out 0.3s backwards;
+}
+
+.status-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: var(--radius-full);
+    background: var(--success-color);
+    box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    animation: status-pulse 2s infinite;
+    flex-shrink: 0;
+}
+
+@keyframes status-pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7);
+    }
+    70% {
+        box-shadow: 0 0 0 8px rgba(16, 185, 129, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(16, 185, 129, 0);
+    }
+}
+
 .hero-actions {
     animation: fadeInUp 1s ease-out 0.6s backwards;
 }
@@ -340,6 +425,42 @@ a[target="_blank"]:not(.icon-only):not(.contact-item a):not(.social-links a)::af
     color: var(--text-primary);
     font-size: clamp(2rem, 3.5vmax, 3rem);
     margin-bottom: 0.5rem;
+}
+
+/* Small uppercase label above section titles */
+.section-kicker {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.section-kicker::after {
+    content: '';
+    display: inline-block;
+    width: 32px;
+    height: 2px;
+    border-radius: var(--radius-full);
+    background: var(--primary-color);
+    margin-left: 0.75rem;
+    vertical-align: middle;
+}
+
+/* Kickers on gradient/dark sections keep light tone */
+#about .section-kicker,
+#portfolio .section-kicker,
+#resume .section-kicker,
+#contact .section-kicker {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+#about .section-kicker::after,
+#portfolio .section-kicker::after,
+#resume .section-kicker::after,
+#contact .section-kicker::after {
+    background: rgba(255, 255, 255, 0.75);
 }
 
 .section-subtitle {
@@ -807,6 +928,44 @@ a[target="_blank"]:not(.icon-only):not(.contact-item a):not(.social-links a)::af
     padding: 0;
 }
 
+.role-block {
+    padding-top: 0.5rem;
+}
+
+.role-block + .role-block {
+    margin-top: 1.5rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.role-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.role-title i {
+    color: var(--primary-color);
+    font-size: 0.95rem;
+}
+
+.role-sub {
+    font-size: 0.85rem;
+    font-weight: 400;
+    color: var(--text-muted);
+}
+
+@media (prefers-color-scheme: dark) {
+    .role-block + .role-block {
+        border-top-color: rgba(255, 255, 255, 0.1);
+    }
+}
+
 .achievements-list li {
     padding: 0.5rem 0;
     color: var(--text-secondary);
@@ -856,8 +1015,8 @@ a[target="_blank"]:not(.icon-only):not(.contact-item a):not(.social-links a)::af
 
 .nav-tabs .nav-link.active {
     color: #ffffff;
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 /* Portfolio cards */
@@ -949,7 +1108,7 @@ a[target="_blank"]:not(.icon-only):not(.contact-item a):not(.social-links a)::af
    RESUME SECTION
    ============================================ */
 #resume {
-    background: var(--gradient-success);
+    background: linear-gradient(135deg, #2563eb 0%, #4f46e5 100%);
     position: relative;
 }
 
@@ -996,6 +1155,20 @@ a[target="_blank"]:not(.icon-only):not(.contact-item a):not(.social-links a)::af
     font-weight: 500;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
     margin-top: 1rem;
+}
+
+.resume-alt-link {
+    margin-top: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.resume-alt-link a {
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: underline;
+}
+
+.resume-alt-link a:hover {
+    color: #ffffff;
 }
 
 /* ============================================
@@ -1228,11 +1401,6 @@ footer .legal-links span {
     .hero-actions .btn {
         width: 100%;
         text-align: center;
-    }
-    
-    /* Disable fixed background on mobile for performance */
-    .background-cntower {
-        background-attachment: scroll;
     }
 }
 

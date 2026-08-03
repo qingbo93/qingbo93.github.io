@@ -1,8 +1,8 @@
 //static first part of the url and my unique id from the website
 var MyWeatherMap = {
     id: '&units=metric&appid=c4368ccc5a6947f38b2734cf06758a03',
-    url: 'http://api.openweathermap.org/data/2.5/forecast/daily?q=',
-    hm: 'http://api.openweathermap.org/data/2.5/weather?q='
+    url: 'https://api.openweathermap.org/data/2.5/forecast/daily?q=',
+    hm: 'https://api.openweathermap.org/data/2.5/weather?q='
 };
 var degreeunit = "C&#176";
 var windunit = "km/h";
@@ -28,19 +28,19 @@ function makeRequestCelsius() {
 }
 
 function sevendayforecast() {
-    MyWeatherMap.url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=';
+    MyWeatherMap.url = 'https://api.openweathermap.org/data/2.5/forecast/daily?q=';
     makeRequest();
 }
 
 function threehourforecast() {
-    MyWeatherMap.url = 'http://api.openweathermap.org/data/2.5/forecast?q=';
+    MyWeatherMap.url = 'https://api.openweathermap.org/data/2.5/forecast?q=';
     makeRequestHourly();
 }
 //the initial request
 function startreq() {
     cityName = document.getElementById("city").value;
     makeRequestNow();
-    if (MyWeatherMap.url == 'http://api.openweathermap.org/data/2.5/forecast/daily?q=') {
+    if (MyWeatherMap.url == 'https://api.openweathermap.org/data/2.5/forecast/daily?q=') {
         makeRequest();
     } else {
         makeRequestHourly();
