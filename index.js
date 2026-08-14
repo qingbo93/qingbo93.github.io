@@ -45,24 +45,32 @@ function initializeAnimations() {
         });
     }, observerOptions);
     
-    fadeElements.forEach(el => {
+    fadeElements.forEach((el, index) => {
         el.classList.add('fade-in');
+        // Staggered reveal: each element delays slightly after its peers
+        el.style.setProperty('--reveal-delay', `${(index % 8) * 70}ms`);
         observer.observe(el);
     });
 }
 
 // ============================================
-// Scroll Effects for Navigation Bar
+// Scroll Effects for Navigation Bar + Progress Bar
 // ============================================
 function initializeScrollEffects() {
     const navbar = document.querySelector('.navbar');
+    const progressBar = document.getElementById('scroll-progress');
     
     window.addEventListener('scroll', () => {
-        if (!navbar) return;
-        if (window.scrollY > 50) {
+        if (navbar && window.scrollY > 50) {
             navbar.classList.add('solid');
-        } else {
+        } else if (navbar) {
             navbar.classList.remove('solid');
+        }
+        
+        if (progressBar) {
+            const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+            const progress = scrollable > 0 ? window.scrollY / scrollable : 0;
+            progressBar.style.transform = `scaleX(${Math.min(Math.max(progress, 0), 1)})`;
         }
     }, { passive: true });
 }
@@ -87,13 +95,46 @@ function initializeSmoothScroll() {
                 e.preventDefault();
                 
                 const navbarHeight = document.querySelector('.navbar').offsetHeight;
-                const elementPosition = targetElement.getBoundingClientRect().top;
+                
+                // Scroll to the section heading (not the section edge) so the
+                // title sits right below the fixed navbar at the top of the page.
+                let scrollTarget = targetElement;
+                if (targetId !== 'myPage') {
+                    const heading = targetElement.querySelector('h3') || targetElement.querySelector('h2');
+                    if (heading) scrollTarget = heading;
+                }
+                
+                const elementPosition = scrollTarget.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - navbarHeight - 20;
+                const targetTop = navbarHeight + 20;
                 
                 window.scrollTo({
-                    top: offsetPosition,
+                    top: Math.max(offsetPosition, 0),
                     behavior: prefersReducedMotion ? 'auto' : 'smooth'
                 });
+
+                // Correction pass: late-loading fonts/images can shift sections
+                // mid-scroll. Keep watching until the heading sits where it
+                // should (or we run out of time), nudging as needed.
+                const settleStart = Date.now();
+                let corrections = 0;
+                const settleCheck = () => {
+                    const currentTop = scrollTarget.getBoundingClientRect().top;
+                    const onTarget = Math.abs(currentTop - targetTop) <= 8;
+                    const elapsed = Date.now() - settleStart;
+                    if (!onTarget && corrections < 4 && elapsed < 3000) {
+                        corrections++;
+                        window.scrollTo({
+                            top: window.scrollY + (currentTop - targetTop),
+                            behavior: 'instant'
+                        });
+                        setTimeout(settleCheck, 350);
+                    } else if (!onTarget && elapsed < 3000) {
+                        // On target soon enough; keep watching briefly
+                        setTimeout(settleCheck, 350);
+                    }
+                };
+                setTimeout(settleCheck, 600);
 
                 // Close mobile menu after clicking a nav link
                 const navbarCollapse = document.getElementById('myNavbar');
