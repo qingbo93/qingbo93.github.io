@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeSmoothScroll();
     initializeTabEnhancements();
     updateCurrentYear();
+    updateStats();
     initializeArrowBounce();
     initializeMobileMenu();
     initializeScrollSpy();
@@ -305,6 +306,41 @@ function updateCurrentYear() {
     const yearElement = document.getElementById('current-year');
     if (yearElement) {
         yearElement.textContent = new Date().getFullYear();
+    }
+}
+
+// ============================================
+// Dynamic stats — derived from page content so they never drift
+// ============================================
+function updateStats() {
+    // Companies: count experience cards on the page
+    const companiesEl = document.getElementById('stat-companies');
+    if (companiesEl) {
+        companiesEl.textContent = document.querySelectorAll('#experience .experience-card').length;
+    }
+
+    // Projects: count portfolio cards across all tabs
+    const projectsEl = document.getElementById('stat-projects');
+    if (projectsEl) {
+        const count = document.querySelectorAll('#personal .portfolio-card, #work .portfolio-card, #academic .portfolio-card').length;
+        projectsEl.textContent = count + '+';
+    }
+
+    // Years: compute from the earliest start date in the experience section
+    const yearsEl = document.getElementById('stat-years');
+    if (yearsEl) {
+        const dates = [...document.querySelectorAll('#experience .date')];
+        let earliestYear = Infinity;
+        dates.forEach(el => {
+            const match = el.textContent.match(/(19|20)\d{2}/);
+            if (match) {
+                const year = parseInt(match[0], 10);
+                if (year < earliestYear) earliestYear = year;
+            }
+        });
+        if (earliestYear !== Infinity) {
+            yearsEl.textContent = (new Date().getFullYear() - earliestYear) + '+';
+        }
     }
 }
 
