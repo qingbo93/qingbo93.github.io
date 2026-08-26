@@ -322,7 +322,7 @@ function updateStats() {
     // Projects: count portfolio cards across all tabs
     const projectsEl = document.getElementById('stat-projects');
     if (projectsEl) {
-        const count = document.querySelectorAll('#personal .portfolio-card, #work .portfolio-card, #academic .portfolio-card').length;
+        const count = document.querySelectorAll('#personal .portfolio-card, #academic .portfolio-card').length;
         projectsEl.textContent = count + '+';
     }
 
