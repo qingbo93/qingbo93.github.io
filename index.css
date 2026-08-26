@@ -1043,9 +1043,10 @@ a[target="_blank"]:not(.icon-only):not(.contact-item a):not(.social-links a)::af
 /* Segmented tab control */
 .nav-tabs {
     border-bottom: none;
-    justify-content: center;
-    margin-bottom: 2rem;
-    display: inline-flex;
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
     gap: 0.4rem;
     padding: 0.4rem;
     background: var(--surface);
