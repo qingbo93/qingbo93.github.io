@@ -768,6 +768,21 @@ a[target="_blank"]:not(.icon-only):not(.contact-item a):not(.social-links a)::af
     color: var(--text-1);
 }
 
+/* Inline links inside About bullets: blend into the sentence, no external arrow */
+.about-list li a {
+    color: inherit;
+    text-decoration: underline;
+    text-decoration-color: var(--accent-soft-border);
+    text-underline-offset: 3px;
+}
+.about-list li a::after {
+    content: none !important;
+}
+.about-list li a:hover {
+    color: var(--accent-2);
+    text-decoration-color: var(--accent-2);
+}
+
 /* Stats row */
 .about-stats {
     display: grid;
