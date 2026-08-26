@@ -22,7 +22,7 @@ document.addEventListener('DOMContentLoaded', function() {
 // Animation System using Intersection Observer
 // ============================================
 function initializeAnimations() {
-    const fadeElements = document.querySelectorAll('.portfolio-card, .skill-category, .experience-card, .about-list li');
+    const fadeElements = document.querySelectorAll('.portfolio-card, .experience-card, .about-list li');
     
     // Respect users who prefer reduced motion
     const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -161,7 +161,7 @@ function initializeTabEnhancements() {
             const targetContent = document.querySelector(e.target.getAttribute('data-bs-target'));
             
             // Add fade-in animation to the newly shown content
-            const cards = targetContent.querySelectorAll('.portfolio-card, .skill-category, .experience-card');
+            const cards = targetContent.querySelectorAll('.portfolio-card, .experience-card');
             cards.forEach((card, index) => {
                 card.style.opacity = '0';
                 card.style.transform = 'translateY(20px)';
