@@ -229,77 +229,6 @@ function initializeScrollSpy() {
 }
 
 // ============================================
-// Video Popup Functionality
-// ============================================
-function onVideoClick(videoSrc) {
-    const popup = document.getElementById('video_pop');
-    const existingVideo = popup.querySelector('video');
-    
-    if (existingVideo) {
-        existingVideo.pause();
-        popup.style.display = 'none';
-        return;
-    }
-    
-    popup.innerHTML = `
-        <video controls autoplay>
-            <source src="${videoSrc}" type="video/webm">
-            Your browser does not support the video tag.
-        </video>
-    `;
-    popup.style.display = 'flex';
-    // Lock body scroll when video is open
-    document.body.style.overflow = 'hidden';
-}
-
-// Close popup when clicking outside video
-const videoPop = document.getElementById('video_pop');
-if (videoPop) {
-    videoPop.addEventListener('click', function(e) {
-        if (e.target === this) {
-            const video = this.querySelector('video');
-            if (video) {
-                video.pause();
-            }
-            this.innerHTML = '';
-            this.style.display = 'none';
-            document.body.style.overflow = '';
-        }
-    });
-}
-
-// Global function for onclick handlers
-window.onPopClick = function() {
-    const popup = document.getElementById('video_pop');
-    const video = popup.querySelector('video');
-    if (video) {
-        video.pause();
-    }
-    popup.innerHTML = '';
-    popup.style.display = 'none';
-    document.body.style.overflow = '';
-};
-
-// ============================================
-// Add keyboard navigation for accessibility
-// ============================================
-document.addEventListener('keydown', function(e) {
-    // Close video popup with Escape key
-    if (e.key === 'Escape') {
-        const popup = document.getElementById('video_pop');
-        if (popup.style.display !== 'none') {
-            const video = popup.querySelector('video');
-            if (video) {
-                video.pause();
-            }
-            popup.innerHTML = '';
-            popup.style.display = 'none';
-            document.body.style.overflow = '';
-        }
-    }
-});
-
-// ============================================
 // Auto-update current year in footer
 // ============================================
 function updateCurrentYear() {
@@ -322,7 +251,7 @@ function updateStats() {
     // Projects: count portfolio cards across all tabs
     const projectsEl = document.getElementById('stat-projects');
     if (projectsEl) {
-        const count = document.querySelectorAll('#personal .portfolio-card, #academic .portfolio-card').length;
+        const count = document.querySelectorAll('#personal .portfolio-card').length;
         projectsEl.textContent = count + '+';
     }
 
