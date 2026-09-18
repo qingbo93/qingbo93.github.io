@@ -242,10 +242,10 @@ function updateCurrentYear() {
 // Dynamic stats — derived from page content so they never drift
 // ============================================
 function updateStats() {
-    // Companies: count experience cards on the page
+    // Companies: count timeline entries on the page
     const companiesEl = document.getElementById('stat-companies');
     if (companiesEl) {
-        companiesEl.textContent = document.querySelectorAll('#experience .experience-card').length;
+        companiesEl.textContent = document.querySelectorAll('#experience .timeline-entry').length;
     }
 
     // Projects: count portfolio cards across all tabs
